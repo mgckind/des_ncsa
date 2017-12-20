@@ -146,6 +146,7 @@
             <a  class="app-menu-item" name="home" href="[[rootPath]]home">Home</a>
 
 
+
           <app-submenu>
             <div class="app-menu-item " slot="submenu-trigger">
               <a name="releases" href="[[rootPath]]releases" style="font-size: 22px; font-weight: normal;">Releases<iron-icon icon="chevron-right"></iron-icon></a>
@@ -157,6 +158,7 @@
                 </div>
 
                 <app-menu class="sublist2" slot="submenu-content">
+                    <a class="app-menu-item" id=needindent name="file-content" href="[[rootPath]]releases/sva1/file-content">Files</a>
                   <app-submenu>
                 <div class="app-menu-item" slot="submenu-trigger">
                   <a class="app-menu-item" id=needindent name="docs" href="[[rootPath]]releases/sva1/docs" persistent="False">Documentation<iron-icon icon="chevron-right"></iron-icon></a>
@@ -168,7 +170,6 @@
                   <a class="app-menu-item" id="needsindent2" name="docs-redmapper" href="[[rootPath]]releases/sva1/docs/docs-redmapper" >RedMaPPer</a>
                 </app-menu>
                 </app-submenu>
-                  <a class="app-menu-item" id=needindent name="file-content" href="[[rootPath]]releases/sva1/file-content">Files</a>
                 </app-menu>
 
               </app-submenu>
@@ -192,9 +193,12 @@
           </app-submenu>
 
 
-          <a class="app-menu-item" name="help" href="[[rootPath]]help">Get Help</a>
-          <a class="app-menu-item" name="thanks" href="[[rootPath]]thanks">Acknowledgement</a>
-          <a class ="app-menu-item" name="about" href="[[rootPath]]about" on-tap="">About Us</a>
+            <a class="app-menu-item" name="help" href="[[rootPath]]help">Get Help</a>
+            <a class="app-menu-item" name="thanks" href="[[rootPath]]thanks">Acknowledgements</a>
+            <a class ="app-menu-item" name="about" href="[[rootPath]]about" on-tap="">About Us</a>
+
+
+
         </iron-selector>
       </app-menu>
            </div>
