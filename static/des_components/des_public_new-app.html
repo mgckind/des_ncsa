@@ -133,7 +133,7 @@
           </app-toolbar>
         </app-header>
 
-    <app-drawer-layout fullbleed narrow="{{narrow}}"  id="drawerLayout" responsive-width="1000px" >
+    <app-drawer-layout fullbleed narrow="{{narrow}}"  id="drawerLayout" responsive-width="1000px"  style = "height: 80%;">
 
       <!-- Drawer content -->
       <app-drawer id="drawer" slot="drawer"  class="drawer-content" swipe-open="[[narrow]]" >
@@ -192,14 +192,15 @@
           </app-submenu>
 
 
-          <a class="app-menu-item" name="help" href="[[rootPath]]help">Help</a>
-          <a class ="app-menu-item" name="thankyou" href="[[rootPath]]thankyou" on-tap="">About Us</a>
+          <a class="app-menu-item" name="help" href="[[rootPath]]help">Get Help</a>
+          <a class="app-menu-item" name="thanks" href="[[rootPath]]thanks">Acknowledgement</a>
+          <a class ="app-menu-item" name="about" href="[[rootPath]]about" on-tap="">About Us</a>
         </iron-selector>
       </app-menu>
            </div>
      </app-drawer>
 
-        <iron-pages style="margin-top: 5px;border-left: groove 1px;padding-left: 8px; padding-right: 8px"
+        <iron-pages style="margin-top: 72px;border-left: groove 1px;padding-left: 8px; padding-right: 8px"
             selected="[[page]]"
             attr-for-selected="name"
             fallback-selection="view404"
@@ -223,7 +224,8 @@
             <des-dr1-access name="dr1access"></des-dr1-access>
           <!-- Other pages -->
           <des-help name="help"></des-help>
-          <des-thankyou name="thankyou"></des-thankyou>
+          <des-thankyou name="thanks"></des-thankyou>
+          <des-about name="about"></des-about>
           <des-limited name="limited"></des-limited>
           <des-view404 name="view404"></des-view404>
         </iron-pages>
