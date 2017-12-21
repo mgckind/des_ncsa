@@ -1,7 +1,3 @@
-<link rel="import" href="../../bower_components/iron-image/iron-image.html">
-<link rel="import" href="../../other_components/mp-slider-master/mp-slider.html">
-<script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-
 <dom-module id="des-home">
 
 <template>
@@ -9,105 +5,114 @@
     <style include="shared-styles">
       :host {
         display: block;
-
+        padding: 10px;
       }
 
       .slides {
-          --paper-slide-height: 400px;
-          --paper-slide-dot: green;
-          --paper-slide-dot-selected: blue;
+          outline: 0;
+          border: 0;
+          --paper-slide-height: 510px;
+          --paper-slide-dot: #eaeaea;
+          --paper-slide-dot-selected: #eaeaea;
+          --paper-slide-dot-styles:{
+          width: 10px;
+          height: 10px;}
+
       }
-         .homeImages {
-           height: 500px;
-           width: 400px;
-
-
-       }
-
-         .onlyfirefox{
-        display:none;
-    }
-
-        @-moz-document url-prefix() {
-     mp-slider{
-        display: none;
-    }
-    .onlyfirefox{
-        display: block;
-        width:300px;
-        height:450px;
-        margin: 0 auto;
-    }
-}
-
+      .slides:focus {
+          outline: 0;
+          border: 0;
+      }
+      .slides:active {
+          outline: 0;
+          border: 0;
+      }
+      .im-slide: {
+          outline: 0;
+          border: 0;
+      }
+      .im-slide:focus {
+          outline: 0;
+          border: 0;
+      }
+      .im-slide:active {
+          outline: 0;
+          border: 0;
+      }
     </style>
 
-<body>
-<des-card></des-card>
-<!--
- <l2t-paper-slider total-slides="3" class="slides">
-   <paper-slide>
-        <div style="text-align: center">
+<des-card>
+ <div class="card-content">
 
-        <iron-image style="width:400px; height:400px " sizing="contain" src="/static/images/Decam.jpg"></iron-image>
+ <l2t-paper-slider total-slides="4" class="slides" auto-progress slide-duration="8">
+   <paper-slide>
+        <div style="text-align: center" class="im-slide">
+        <iron-image class="homeImages" sizing="contain" src="/static/images/Decam1.jpg"></iron-image>
           </div>
       </paper-slide>
    <paper-slide>
-        <div style="text-align: center">
-        <iron-image style="width:400px; height:400px " sizing="contain" src="/static/images/Blanco4m-starry-400px.jpg"></iron-image>
+        <div style="text-align: center" class="im-slide">
+        <iron-image class="homeImages"  sizing="contain" src="/static/images/CometLovejoy.png"></iron-image>
           </div>
-    </div>
    </paper-slide>
    <paper-slide>
-        <div style="text-align: center">
-        <iron-image style="width:400px; height:400px " sizing="contain" src="/static/images/TN_TN_47Tuc_adj.png"></iron-image>
+        <div style="text-align: center" class="im-slide">
+        <iron-image class="homeImages"  sizing="contain" src="/static/images/DECam2.jpg"></iron-image>
           </div>
-    </div>
    </paper-slide>
+   <paper-slide>
+        <div style="text-align: center" class="im-slide">
+        <iron-image class="homeImages" sizing="contain" src="/static/images/BlancoTelescope.jpg"></iron-image>
+          </div>
  </l2t-paper-slider>
- -->
+    </div>
 
- <div class="card-content">
-
-     <img class="onlyfirefox" src="../../../static/images/Decam1.jpg">
-
-
+<!--
     <mp-slider id="mptest" controls class="slider">
     <div>
-        <iron-image class="homeImages" sizing="contain" src="../../../static/images/Decam1.jpg"></iron-image>
+        <iron-image class="homeImages" sizing="contain" src="/static/images/Decam1.jpg"></iron-image>
          <mp-caption style='text-align: center' slider-content="DECam Focal Plane Detector (Reidar Hahn, Fermilab)">
         </mp-caption>
 
     </div>
 
          <div>
-        <iron-image class="homeImages"  sizing="contain" src="../../../static/images/CometLovejoy.png"></iron-image>
+        <iron-image class="homeImages"  sizing="contain" src="/static/images/CometLovejoy.png"></iron-image>
           <mp-caption style='text-align: center' slider-content="Comet Loveyjoy (DECam, DES Collaboration)">
         </mp-caption>
     </div>
 
          <div>
-        <iron-image class="homeImages"  sizing="contain" src="../../../static/images/DECam2.jpg"></iron-image>
+        <iron-image class="homeImages"  sizing="contain" src="/static/images/DECam2.jpg"></iron-image>
               <mp-caption style='text-align: center' slider-content="Dark Energy Camera (DECam) on Blanco Telescope (Reidar Hahn, Fermilab)">
         </mp-caption>
     </div>
 
     <div>
-        <iron-image class="homeImages" sizing="contain" src="../../../static/images/BlancoTelescope.jpg"></iron-image>
+        <iron-image class="homeImages" sizing="contain" src="/static/images/BlancoTelescope.jpg"></iron-image>
         <mp-caption style='text-align: center' slider-content="Blanco telescope and star trails (Reidar Hahn, Fermilab)">
         </mp-caption>
     </div>
 
     <div>
-        <iron-image class="homeImages" sizing="contain" src="../../../static/images/TN_TN_47Tuc_adj.png"></iron-image>
+        <iron-image class="homeImages" sizing="contain" src="/static/images/TN_TN_47Tuc_adj.png"></iron-image>
         <mp-caption style='text-align: center' slider-content="Mosaic image of the Fornax cluster of galaxies"></mp-caption>
     </div>
     </mp-slider>
+-->
+        <!--
+        <iron-image class="homeImages" sizing="contain" src="/static/images/Decam1.jpg"></iron-image>
 
+        <iron-image class="homeImages"  sizing="contain" src="/static/images/CometLovejoy.png"></iron-image>
 
+        <iron-image class="homeImages"  sizing="contain" src="/static/images/DECam2.jpg"></iron-image>
 
-          <h3><strong>Overview of the Dark HELP Energy Survey (DES)</strong> </h3>
+        <iron-image class="homeImages" sizing="contain" src="/static/images/BlancoTelescope.jpg"></iron-image>
 
+        <iron-image class="homeImages" sizing="contain" src="/static/images/TN_TN_47Tuc_adj.png"></iron-image>
+    -->
+
+          <h3><strong>Overview of the Dark Energy Survey (DES)</strong> </h3>
 
 <p>The DES is a 5000 square degree <em>grizY</em> survey of the Southern sky aimed at understanding the accelerating expansion rate of the universe using four complementary methods: weak gravitational lensing, galaxy cluster counts, baryon acoustic oscillations, and Type Ia supernovae. DES uses the new 3 square degree Dark Energy Camera (DECam) imager, a 570 Megapixel CCD camera installed at the prime focus of on the Blanco 4m telescope at the Cerro Tololo Interamerican Observatory in northern Chile. For about 100 nights per year, during the next five years, the DECam will scan the sky to perform a 5000 sq-degree wide field survey and 30 sq-degree supernova survey. Learn more on the main <a href="http://www.darkenergysurvey.org/">DES website.</a></p>
 
@@ -118,10 +123,8 @@
 
 
 
-          </div>
 
-</body>
-
+</des-card>
 </template>
 </dom-module>
 
@@ -132,6 +135,3 @@
     }
     window.customElements.define(DesHome.is, DesHome);
   </script>
-
-
-
