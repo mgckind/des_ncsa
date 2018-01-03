@@ -4,26 +4,61 @@
 :host {
     padding: 10px;
 }
+ des-img-big{
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+ paper-dialog#dialogfig1{
+    display: inline-block;
+    margin-bottom:auto;
+    right: 5%;
+    max-width:650px;
+ }
+
+  paper-dialog#dialogfig2{
+   display: inline-block;
+   margin-bottom:auto;
+   right: 5%;
+   max-width:650px;
+  }
+
+ paper-dialog#dialogfig3{
+  display: inline-block;
+  margin-bottom:auto;
+  right:5%;
+  max-width:650px;
+  }
 </style>
 
 
 <paper-dialog id="dialogfig1">
+ <paper-dialog-scrollable>
    <des-img-big src="/static/images/fig4_desdm_paper.png">Figure 1. DESDM Pipeline. Calibration and raw science images are delivered from DECam by SISPI and DTS to NCSA. In Single Epoch Processing (yellow box), raw science exposures undergo preprocessing and are combined with calibration images to produce First Cut images for initial inspection and Final Cut images for science releases. Images in the Supernova fields are processed with the Supernova Pipeline (blue boxes). Final Cut images and catalogs are sent to Multi-Epoch Processing (pink box), the outputs of which go to the science groups for validation and analysis (gray boxes).</des-img-big>
   <div class="buttons">
     <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
   </div>
+  </paper-dialog-scrollable>
 </paper-dialog>
+
 <paper-dialog id="dialogfig2">
+ <paper-dialog-scrollable>
    <des-img-big src="/static/images/fig5_desdm_paper.png">Figure 2. A diagram of the Preprocessing applied to every exposure. This is a “zoom in” of the the Preprocessing box in Figure 1. This includes our initial masking and detrending with bias and flat images (green and red arrows, respectively). Preprocessed exposures are then processed with the First Cut or Final Cut pipeline.</des-img-big>
   <div class="buttons">
     <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
   </div>
+ </paper-dialog-scrollable>
 </paper-dialog>
+
 <paper-dialog id="dialogfig3">
+ <paper-dialog-scrollable>
    <des-img-big src="/static/images/processing.gif">Figure 3. Simplified animated version of both pipelines showing the final result after coadditon for a selected area of the sky </des-img-big>
   <div class="buttons">
     <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
   </div>
+ </paper-dialog-scrollable>
 </paper-dialog>
 
 
@@ -1769,7 +1804,6 @@
           var temp = e.target.dataset.item;
           //this.$.dialogfig.open();
           this.shadowRoot.querySelector('#dialogfig'+temp).open();
-
           }
        }
      window.customElements.define(desDr1Soft.is,desDr1Soft);
