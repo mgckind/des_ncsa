@@ -15,18 +15,46 @@
     text-align: justify;
     font-style: italic;
 }
+
+    des-img, des-img-big{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    }
+
+paper-dialog{
+    display: inline-block;
+    margin-bottom:auto;
+    right: 5%;
+    margin-left: 20px;
+    margin-right:20px;
+    margin-top:20px;
+    max-width: 675px;
+
+ }
+.buttons{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
 </style>
 
 
 <paper-dialog id="dialogfig1">
+    <paper-dialog-scrollable>
             <des-img-big  src="/static/images/dr1/footprint_h32_tiles.png">
                 Figure 1. DES footprint subdivisions. This figure shows the 10,338 coadd tiles and 1753 HEALPix nside = 32 pixels covered by DR1.
             </des-img-big>
   <div class="buttons">
     <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
   </div>
+    </paper-dialog-scrollable>
 </paper-dialog>
+
 <paper-dialog id="dialogfig2">
+    <paper-dialog-scrollable>
             <des-img-big  src="/static/images/dr1/dr1_bandpass.png">
             Figure 2. DR1 Standard Bandpasses for the DECam g, r, i, z and
             Y filters. The bandpasses represent the total system throughput, including
@@ -35,6 +63,7 @@
   <div class="buttons">
     <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
   </div>
+    </paper-dialog-scrollable>
 </paper-dialog>
 
 

@@ -8,17 +8,43 @@
        padding: 10px;
        }
 
+des-img, des-img-big{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    }
+
+paper-dialog{
+    display: inline-block;
+    margin-bottom:auto;
+    right: 5%;
+    margin-left: 20px;
+    margin-right:20px;
+    margin-top:20px;
+    max-width: 675px;
+
+ }
+.buttons{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+
 </style>
 
 <div class="fixup" id="ncsa_top"></div>
 <div class="fixdown"></div>
 <paper-dialog id="dialogfig3">
+    <paper-dialog-scrollable>
             <des-img-big  src="/static/images/DESaccess.png" on-tap="_dialog" data-item="3">
             Figure 3. Schema for DESaccess arquitecture
             </des-img-big>
   <div class="buttons">
     <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
   </div>
+    </paper-dialog-scrollable>
 </paper-dialog>
 
 <des-card heading = 'NCSA DESaccess'>
