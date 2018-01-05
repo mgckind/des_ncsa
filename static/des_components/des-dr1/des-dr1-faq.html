@@ -18,37 +18,65 @@
     color: green;
     opacity: 0.7;
 }
+    des-img, des-img-big{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    }
+
+paper-dialog{
+    display: inline-block;
+    margin-bottom:auto;
+    right: 5%;
+    margin-left: 20px;
+    margin-right:20px;
+    margin-top:20px;
+    max-width:675px;
+
+ }
+.buttons{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
 </style>
 
 
 <paper-dialog id="dialogfig1">
+    <paper-dialog-scrollable>
             <des-img-big  src="/static/images/faq/theta_image_spikes.png" on-tap="_dialog" data-item="1">
             Figure 1. Histograms of THETAWIN_IMAGE for a sample of objects with no filters applied(top) and with selection filters applied (bottom)
         </des-img-big>
   <div class="buttons">
     <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
   </div>
+         </paper-dialog-scrollable>
 </paper-dialog>
 
 <paper-dialog id="dialogfig2">
+    <paper-dialog-scrollable>
             <des-img  src="/static/images/faq/spikes.png" on-tap="_dialog" data-item="2">
             Figure 2. The represented 5-edge-contiguous-pixel configurations in a 9 x 9 box. <br />
         </des-img>
   <div class="buttons">
     <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
   </div>
+    </paper-dialog-scrollable>
 </paper-dialog>
 <paper-dialog id="dialogfig3">
+    <paper-dialog-scrollable>
         <des-img-big  src="/static/images/faq/regellipses.png" on-tap="_dialog" data-item="3">
         Figure 3.  DS9 snapshot of the i-band fits image for tile DES0203-4914 (retrieved from the DR1 footprint tool
     </des-img-big>
   <div class="buttons">
     <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
   </div>
+    </paper-dialog-scrollable>
 </paper-dialog>
 <div class="fixup" id="faq_top"></div>
 <div class="fixdown"></div>
-<des-card heading ='FAQ'>
+<des-card heading ='DR1 FAQ'>
     <div class=card-content>
 <ol>
   <li><a href="javascript:void(0)" on-tap="_scroll" data-item="1">
@@ -77,7 +105,6 @@
   </a></li>
 </ol>
 <hr />
-<br />
 
 <p><br/></p>
 <div class="fixup" id="faq1"></div>
@@ -97,8 +124,8 @@
 
 <div class="answer" style="diplay: inline;">
     A histogram of THETAWIN_IMAGE appears to be quantized, with angles of 90 degrees and 45 appearing much more commonly than angles in between (<a href="javascript:void(0)" on-tap="_dialog" data-item="1"/>Figure 1</a>).
-<p>What's going on?   In short, object detection in sextractor requires about 5 contiguous pixels to be above background for an object detction. Some configurations of these 5 contiguous pixels are not allowed, such as pixels that only touch at the corners, full edge continuity is required.  For faint objects, allowed patterns in the pixel checkerboard of 5 touching pixels result in a measured position angle (THETAWIN_IMAGE) of certain angles, like 0, 90, 45, 90-45 degrees, and to a lessor extent 18.4, 90-18.4 degrees to be much more common (see upper panel of first figure).   If one selects a subset of objects with:</p>
-<p>b_image &gt; 0.9 .AND. ( (mag_auto_i &lt; 19 and 1-b_image/a_image &lt; 0.2) OR (1-b_image/a_image &lt; 0.2 + (mag_auto_i-19)/5 )), one rejects very small objects and also objects which are bright and very elongated or somewhat fainter and slightly more elongated), one can get rid of most of the spikes in the histogram (lower panel of <a href="javascript:void(0)" on-tap="_dialog" data-item="1"/>Figure 1</a>).  The over-represented 5-edge-contiguous-pixel configurations are shown in <a href="javascript:void(0)" on-tap="_dialog" data-item="2"/>Figure 2</a>.</p>
+    <p>What's going on? In short, object detection in sextractor requires about 5 contiguous pixels to be above background for an object detction. Some configurations of these 5 contiguous pixels are not allowed, such as pixels that only touch at the corners, full edge continuity is required.  For faint objects, allowed patterns in the pixel checkerboard of 5 touching pixels result in a measured position angle (THETAWIN_IMAGE) of certain angles, like 0, 90, 45, 90-45 degrees, and to a lessor extent 18.4, 90-18.4 degrees to be much more common (see upper panel of first figure). 
+If one selects a subset of objects with: <br> b_image &gt; 0.9 .AND. ( (mag_auto_i &lt; 19 and 1-b_image/a_image &lt; 0.2) OR (1-b_image/a_image &lt; 0.2 + (mag_auto_i-19)/5 )), <br> one rejects very small objects and also objects which are bright and very elongated or somewhat fainter and slightly more elongated), one can get rid of most of the spikes in the histogram (lower panel of <a href="javascript:void(0)" on-tap="_dialog" data-item="1"/>Figure 1</a>).  The over-represented 5-edge-contiguous-pixel configurations are shown in <a href="javascript:void(0)" on-tap="_dialog" data-item="2"/>Figure 2</a>.</p>
 
             <des-img  src="/static/images/faq/theta_image_spikes.png" on-tap="_dialog" data-item="1">
             Figure 1. Histograms of THETAWIN_IMAGE for a sample of objects with no filters applied(top) and with selection filters applied (bottom)
@@ -156,7 +183,7 @@
 <div class="fixup" id="faq6"></div>
 <h3 class="fixdown">6. How do I find out if my object/location on the sky is in the DES footprint?  &nbsp; &nbsp; <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
 
-<p class="answer">You can use the interactive tools, <a href="https://des.ncsa.illinois.edu/easyweb/footprint">https://des.ncsa.illinois.edu/easyweb/footprint</a> or here <a href="https://desportal2.cosmology.illinois.edu/dri/apps/home/">https://desportal2.cosmology.illinois.edu/dri/apps/home/</a> .  Using Healpix you can locate a position (or a set of positions) within a Healpix cell, then you can select the cell and the objects within directly from the DR1 DB. HPIX resolutions in NESTED schema are available at nside = 32, 64, 1024,4096,16384</p>
+    <p class="answer">You can use the interactive tools <a href="https://des.ncsa.illinois.edu/easyweb/footprint">here</a> or <a href="https://desportal2.cosmology.illinois.edu/dri/apps/home/">here</a>. Using Healpix you can locate a position (or a set of positions) within a Healpix cell, then you can select the cell and the objects within directly from the DR1 DB. HPIX resolutions in NESTED schema are available at nside = 32, 64, 1024,4096,16384</p>
 
 <p><br/></p>
 <div class="fixup" id="faq7"></div>

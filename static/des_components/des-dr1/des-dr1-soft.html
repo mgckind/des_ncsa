@@ -84,7 +84,7 @@
 <ol>
 
   <li style="margin-left: 30.0px;">First cut: this pipeline (roughly) comprises the tasks oriented to transform and calibrate the raw image, calculate astrometric solutions, mask regions, model point spread function, apply quality assessments, and save such results as part of the single epoch database catalogs. For this pipeline, calibrations coming from the previous year of observing are used. At the end of the pipeline, a quality assessment is performed, and any exposures not passing minimum quality criteria re-enters the queue to be re-observed at CTIO.</li>
-  <li style="margin-left: 30.0px;">Final cut: this pipeline performs the same tasks as First cut. However, configuration and calibration files (e.g., flats, bad pixels masking, sky flats) are updated to the most recent versions, which include calibrations coming from the current year of observations. This pipeline is the source of the images that will enter the Multi Epoch processing to generate the coadded catalogs of DR1.</li>
+  <li style="margin-left: 30.0px;">Final cut: this pipeline performs the same tasks as First cut. However, configuration and calibration files (e.g., flats, bad pixels masking, and sky flats) are updated to the most recent versions, which include calibrations coming from the current year of observations. This pipeline is the source of the images that will enter the Multi Epoch processing to generate the coadded catalogs of DR1.</li>
 
 </ol>
 <ul>
@@ -97,7 +97,7 @@
 
    <des-img-big  src="/static/images/fig4_desdm_paper.png" on-tap="_dialog" data-item="1">Figure 1. DESDM Pipeline. Calibration and raw science images are delivered from DECam by SISPI and DTS to NCSA. In Single Epoch Processing (yellow box), raw science exposures undergo preprocessing and are combined with calibration images to produce First Cut images for initial inspection and Final Cut images for science releases. Images in the Supernova fields are processed with the Supernova Pipeline (blue boxes). Final Cut images and catalogs are sent to Multi-Epoch Processing (pink box), the outputs of which go to the science groups for validation and analysis (gray boxes).</des-img-big>
 
- <p><a href="javascript:void(0)" on-tap="_dialog" data-item="2"/>Figure 2</a> shows the steps comprised on preprocessing, First cut being the upper set of connected boxes, and Final cut belonging to the upper and lower diagram flows. For the last, current year super-calibrations (generated from each epoch) are employed, in contrast to First cut where previous super-calibrations are selected.</p>
+ <p><a href="javascript:void(0)" on-tap="_dialog" data-item="2"/>Figure 2</a> shows the steps comprised on preprocessing, First cut being the upper set of connected boxes, and Final cut belonging to the upper and lower diagram flows. For the latter, current year super-calibrations (generated from each epoch) are employed, in contrast to First cut where previous super-calibrations are selected.</p>
 
    <des-img-big src="/static/images/fig5_desdm_paper.png" on-tap="_dialog" data-item="2">Figure 2. A diagram of the Preprocessing applied to every exposure. This is a “zoom in” of the the Preprocessing box in Figure 1. This includes our initial masking and detrending with bias and flat images (green and red arrows, respectively). Preprocessed exposures are then processed with the First Cut or Final Cut pipeline.</des-img-big>
  <p>
@@ -115,7 +115,7 @@
         <p>
    To better illustrate each processing step of the Single Epoch workflow, each step is described below for both First and Final cut. For every step, the parent package with its corresponding version is displayed. Because of various improvements, you must use the right version of each package for successful processing.
  </p>
-   The parent packages are listed, with links to their repositories, being Github DES Data Management ( <a href="https://github.com/DarkEnergySurvey/">DESDM </a>) for the DES specific codes, <a href="https://www.astromatic.net/">Astromatic </a>  for astrometric and point spread function (Emmanuel Bertin's group), and the python wrapper for Healpix <a href="http://adsabs.harvard.edu/abs/2005ApJ...622..759G"> (Górski et al. 2005)</a>
+   The parent packages are listed, with links to their repositories, being Github DES Data Management (<a href="https://github.com/DarkEnergySurvey/">DESDM</a>) for the DES specific codes, <a href="https://www.astromatic.net/">Astromatic </a>  for astrometric and point spread function (Emmanuel Bertin's group), and the python wrapper for Healpix <a href="http://adsabs.harvard.edu/abs/2005ApJ...622..759G"> (Górski et al. 2005)</a>
 
 
  </p>
