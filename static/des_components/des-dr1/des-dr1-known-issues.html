@@ -109,21 +109,19 @@ paper-dialog{
         <p><br/></p>
         <div class="fixup" id="issues_imaflags"></div>
         <h3 class="fixdown">IMAFLAGS_ISO  &nbsp; &nbsp; <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
-        <p>Among all the objects detected and cataloged, ~2.3% have been flagged by IMAFLAGS_ISO in at least one of the<em> grizY </em>bands, and ~0.1% have artifacts in all 5 bands. It is recommended to use IMAFLAGS_ISO = 0 as a first filter of clean objects. Most of the objects with IMAFLAGS_ISO = 1 are saturated stars (<a href="javascript:void(0)" on-tap="_dialog" data-item="2"/>Figure 2</a>).
-
-               <des-img  src="/static/images/dr1/saturated.png" on-tap="_dialog" data-item="2">
+        <p>Among all the objects detected and cataloged, ~2.3% have been flagged by IMAFLAGS_ISO in at least one of the<em> grizY </em>bands, and ~0.1% have artifacts in all 5 bands. It is recommended to use IMAFLAGS_ISO = 0 as a first filter of clean objects. Most of the objects with IMAFLAGS_ISO = 1 are saturated stars (<a href="javascript:void(0)" on-tap="_dialog" data-item="2"/>Figure 2</a>).A smaller fraction of flagged objects are missing imaging data in one or more of the bands, as shown in <a href="javascript:void(0)" on-tap="_dialog" data-item="3"/>Figure 3</a>, and usually have NITER_MODEL = 0, which is set for objects that did not converge during the photometry measurement.
+        </p>
+            <div style="display: flex">
+               <des-img  src="/static/images/dr1/saturated.png" on-tap="_dialog" data-item="2" >
             Figure 2. Composite<em> gri</em> 1' cutouts of saturated stars with IMAFLAGS_ISO =1.<br /><br />
             </des-img>
 
-            A smaller fraction of flagged objects are missing imaging data in one or more of the bands, as shown in <a href="javascript:void(0)" on-tap="_dialog" data-item="3"/>Figure 3</a>, and usually have NITER_MODEL = 0, which is set for objects that did not converge during the photometry measurement.</p>
-            <p>
-                <br />
-            </p>
 
-            <des-img  src="/static/images/dr1/niter.png" on-tap="_dialog" data-item="3">
+
+            <des-img  src="/static/images/dr1/niter.png" on-tap="_dialog" data-item="3" >
             Figure 3.  Composite <em>gri</em> 1' cutouts of objects with IMAFLAGS_ISO =1 and NITER_MODEL = 0 shows than in their majority, however not exclusively, are missing data.
             </des-img>
-
+            </div>
         <p><br/></p>
         <div class="fixup" id="issues_bright"></div>
         <h3 class="fixdown">Bright Objects  &nbsp; &nbsp; <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>

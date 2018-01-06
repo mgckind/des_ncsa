@@ -127,12 +127,14 @@ paper-dialog{
     <p>What's going on? In short, object detection in sextractor requires about 5 contiguous pixels to be above background for an object detction. Some configurations of these 5 contiguous pixels are not allowed, such as pixels that only touch at the corners, full edge continuity is required.  For faint objects, allowed patterns in the pixel checkerboard of 5 touching pixels result in a measured position angle (THETAWIN_IMAGE) of certain angles, like 0, 90, 45, 90-45 degrees, and to a lessor extent 18.4, 90-18.4 degrees to be much more common (see upper panel of first figure). 
 If one selects a subset of objects with: <br> b_image &gt; 0.9 .AND. ( (mag_auto_i &lt; 19 and 1-b_image/a_image &lt; 0.2) OR (1-b_image/a_image &lt; 0.2 + (mag_auto_i-19)/5 )), <br> one rejects very small objects and also objects which are bright and very elongated or somewhat fainter and slightly more elongated), one can get rid of most of the spikes in the histogram (lower panel of <a href="javascript:void(0)" on-tap="_dialog" data-item="1"/>Figure 1</a>).  The over-represented 5-edge-contiguous-pixel configurations are shown in <a href="javascript:void(0)" on-tap="_dialog" data-item="2"/>Figure 2</a>.</p>
 
-            <des-img  src="/static/images/faq/theta_image_spikes.png" on-tap="_dialog" data-item="1">
+    <div style="display: flex">
+            <des-img  src="/static/images/faq/theta_image_spikes.png" on-tap="_dialog" data-item="1"  >
             Figure 1. Histograms of THETAWIN_IMAGE for a sample of objects with no filters applied(top) and with selection filters applied (bottom)
             </des-img>
-            <des-img  src="/static/images/faq/spikes.png" on-tap="_dialog" data-item="2">
+            <des-img  src="/static/images/faq/spikes.png" on-tap="_dialog" data-item="2" >
             Figure 2. The represented 5-edge-contiguous-pixel configurations in a 9 x 9 box. <br />
             </des-img>
+    </div>
 </div>
 
 <p><br/></p>
