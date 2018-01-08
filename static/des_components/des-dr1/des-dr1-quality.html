@@ -37,124 +37,23 @@ paper-dialog{
     display: block;
     margin: 0 auto;
 }
+
+    div.parent{
+    position:absolute;
+    left:10%;
+    max-width: 1200px;
+
+}
+paper-dialog.child{
+ position: relative;
+ max-width:700px;
+ min-height:100px;
+
+}
 </style>
 
-<paper-dialog id="dialogfig1">
-    <paper-dialog-scrollable>
-        <des-img-big src="/static/images/dr1/gaia_astro_residual.png">Figure 1. Absolute astrometric precision against an external source, namely, Gaia stars with G<sub>Gaia</sub> ~ 16. On the left is plotted the mean value of astrometric discrepancy with Gaia vs sky position in a HEALPix cell of NSIDE = 256. On the right, the histogram of the overall offset is shown.</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
 
-<paper-dialog id="dialogfig2">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/fgcm_calib_error_i_nozpcorr.png">Figure 2. FGCM calibration error. On the left is plotted the mean value of this residual vs sky position in a HEALPix cell of NSIDE = 256. On the right, the histogram of the photometric residue is shown.</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
 
-<paper-dialog id="dialogfig3">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/gaia_phot_residual_nozpcorr.png">Figure 3.  The distribution of photometric residuals against the Gaia’s G band across the DES footprint is used the evaluate the uniformity of the coadd FGCM calibration. On the left is plotted the mean value of this residual vs sky position in a HEALPix cell of NSIDE = 256. On the right, the histogram of the photometric residue is shown.</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig4">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/dr1_magauto.png">Figure 4. Source counts using SExtractor’s MAG_AUTO quantity.</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig5">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/dr1_coadd_depth_sn10.png">Figure 5. Catalog depth estimated for MAG_AUTO using catalog objects with S/N = 10 (MAGERR_AUTO = 0.10857.</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig6">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/dr1_maglim_hist.png">Figure 6. Catalog depth estimated for a 2'' aperture (MAG_AUTO_4) using mangle.<br /></des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig7">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/dr1_efficiency_contamination_band.png">Figure 7.  DES DR1 detection efficiency and contamination relative to deeper imaging from CFHTLenS. Solid color curves represent the detection efficiency, while dashed color curves show the fraction of unmatched objects appearing only in DES. For visual reference, gray dashed lines indicate 5% and 95% of objects</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig8">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/y3a2_ext_coadd_scatter.png">Figure 8. Stars and galaxies occupy distinct regions of spreadmodel-space at bright magnitudes, but become more difficult to distinguish at faint magnitudes<br /><br /></des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig9">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/y3a2_ext_coadd_stellar_selection.png">Figure 9.  DES DR1 object classification accuracy versus HSC-SSP for the stellar sample.  By using an interval of EXTENDED_COADD values, the balance of classification efficiency and purity can be adjusted as appropriate for specific science cases.</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig10">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/stellar_density_1024.png">Figure 10. Stellar density map at HEALPix NSIDE = 1024 resolution created with the EXTENDED_COADD = 0 selection described above. Discrete peaks in the stellar density correspond to globular clusters and dwarf galaxies in the Milky Way halo. <br/></des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig11">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/y3a2_ext_coadd_galaxy_selection.png">Figure 11.   DES DR1 object classification accuracy versus HSC-SSP for the galaxy sample.  By using an interval of EXTENDED_COADD values, the balance of classification efficiency and purity can be adjusted as appropriate for specific science cases.</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig12">
-    <paper-dialog-scrollable>
-       <des-img-big src="/static/images/dr1/galaxy_density_1024.png">Figure 12.  Galaxy density map at HEALPix NSIDE = 1024 resolution created with the EXTENDED_COADD = 3 selection described above. <br /><br /></des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig13">
-    <paper-dialog-scrollable>
-    <des-img-big src="/static/images/dr1/dr1_roc.png">Figure 13.  Receiver operating characteristic (ROC) curve for a stellar selection in the magnitude range 22.5 &lt; MAG_AUTO_I &lt; 23.0. The SPREAD_MODEL outperforms CLASS_STAR in classification accuracy of DES DR1 objects with respect to HSC-SSP.</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-    </paper-dialog-scrollable>
-</paper-dialog>
 
 <div class="fixup" id="quality_top"></div>
 <div class="fixdown"></div>
@@ -199,7 +98,19 @@ paper-dialog{
         <h3 class="fixdown">Astrometry  &nbsp; &nbsp; <a style="font-size:13px" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
         <p>The DR1 astrometric solution is derived in two steps using SCAMP with 2MASS as the reference catalog (Morganson et al. 2018). At the single-epoch stage, we find internal astrometric uncertainties of 42, 36, 37, 39, and 56 mas in the g, r, i, z, and Y bands, respectively, as determined from the median of two-dimensional angular separations between repeated measurements of bright stars from individual exposures. Following the astrometric refinement step for image coaddition by SCAMP, the estimated internal astrometric precision for the coadd is ~30mas RMS (median over coadd tiles). The absolute astrometric uncertainty of the coadd is evaluated with respect to Gaia DR1 (<a href="http://adsabs.harvard.edu/abs/2016A%26A...595A...2G">Gaia Collaboration et al. 2016</a>).
             <br /><a href="javascript:void(0)" on-tap="_dialog" data-item="1"/>Figure 1</a> shows that the residuals are smallest in regions with larger stellar densities closer to the Galactic plane (for comparison, see <a href="javascript:void(0)" on-tap="_dialog" data-item="10"/>Figure 10</a> ), and the mean over the footprint is ~145 mas. Further details of astrometric calibration, including ongoing development using Gaia as a reference catalog, are provided in <a href="http://adsabs.harvard.edu/abs/2017PASP..129g4503B">Bernstein et al. (2017b</a>).</p>
-        <p><br /> </p>
+
+
+        <div class="parent">
+<paper-dialog id="dialogfig1" class="child">
+    <paper-dialog-scrollable>
+        <des-img-big src="/static/images/dr1/gaia_astro_residual.png">Figure 1. Absolute astrometric precision against an external source, namely, Gaia stars with G<sub>Gaia</sub> ~ 16. On the left is plotted the mean value of astrometric discrepancy with Gaia vs sky position in a HEALPix cell of NSIDE = 256. On the right, the histogram of the overall offset is shown.</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+</div>
+
 
         <des-img-big src="/static/images/dr1/gaia_astro_residual.png" on-tap="_dialog" data-item="1">Figure 1. Absolute astrometric precision against an external source, namely, Gaia stars with G<sub>Gaia</sub> ~ 16. On the left is plotted the mean value of astrometric discrepancy with Gaia vs sky position in a HEALPix cell of NSIDE = 256. On the right, the histogram of the overall offset is shown.</des-img-big>
 
@@ -211,11 +122,34 @@ paper-dialog{
 
         <p>The single-epoch photometric statistical precision (associated with random errors in the FGCM fit parameters) derived from repeated measurements of FGCM calibration stars is 7.3, 6.1, 5.9, 7.3, 7.8 mmag in the g, r, i, z, and Y bands, respectively. Under the assumption that successive tiled observations of the same fields yield largely independent model fit parameters (as would be expected from the widely spaced observations in DES), we estimate the statistical precision of coadd zeropoints by combining the fit results from overlapping exposures. The median coadd zeropoint statistical uncertainty for the g, r, i, z, and Y band is 5, 4, 5, 6, and 5 mmag, respectively.  <a href="javascript:void(0)" on-tap="_dialog" data-item="2"/>Figure 2</a> shows an example distribution for the i band.
 
+            <div class="parent">
+<paper-dialog id="dialogfig2" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/fgcm_calib_error_i_nozpcorr.png">Figure 2. FGCM calibration error. On the left is plotted the mean value of this residual vs sky position in a HEALPix cell of NSIDE = 256. On the right, the histogram of the photometric residue is shown.</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+    </div>
+
 <des-img-big src="/static/images/dr1/fgcm_calib_error_i_nozpcorr.png" on-tap="_dialog" data-item="2">Figure 2. FGCM calibration error. On the left is plotted the mean value of this residual vs sky position in a HEALPix cell of NSIDE = 256. On the right, the histogram of the photometric residue is shown. <br /></des-img-big>
 
 <br>
 
             As a validation, we compare the photometric uniformity of DES DR1 to the space-based Gaia G-ban photometry (<a href="javascript:void(0)" on-tap="_dialog" data-item="3"/>Figure 3</a>). Variations in uniformity are found to be 6.6 mmag, as estimated from a Gaussian fit to the offset distribution between G<sub>Gaia</sub> and G<sub>pred</sub>(r) predicted from the DES r-band.</p>
+
+
+    <div class="parent">
+<paper-dialog id="dialogfig3" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/gaia_phot_residual_nozpcorr.png">Figure 3.  The distribution of photometric residuals against the Gaia’s G band across the DES footprint is used the evaluate the uniformity of the coadd FGCM calibration. On the left is plotted the mean value of this residual vs sky position in a HEALPix cell of NSIDE = 256. On the right, the histogram of the photometric residue is shown.</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+    </div>
 
          <des-img-big  src="/static/images/dr1/gaia_phot_residual_nozpcorr.png" on-tap="_dialog" data-item="3">Figure 3.  The distribution of photometric residuals against the Gaia’s G band across the DES footprint is used the evaluate the uniformity of the coadd FGCM calibration. On the left is plotted the mean value of this residual vs sky position in a HEALPix cell of NSIDE = 256. On the right, the histogram of the photometric residue is shown.</des-img-big>
 
@@ -294,6 +228,17 @@ paper-dialog{
         <h5 class="fixdown">Flux Distribution</h5>
         <p>The distribution of astronomical sources is weighted towards low-flux sources. A faint limit on the source detection threshold can be estimated from the mode of the number counts distribution of sources as a function of magnitude. <a href="javascript:void(0)" on-tap="_dialog" data-item="4"/>Figure 4</a> shows the number counts of coadd objects as a function of MAG_AUTO in all five DES bands. The mode of the MAG_AUTO distribution is 24.32, 23.89, 23.41, 22.09, 21.40 in the g, r, i, z, and Y bands, respectively. No restriction were placed on source morphology (i.e., stars vs. galaxies) for this estimate.</p>
 
+         <div class="parent">
+<paper-dialog id="dialogfig4" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/dr1_magauto.png">Figure 4. Source counts using SExtractor’s MAG_AUTO quantity.</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+    </div>
+
 
         <des-img-big src="/static/images/dr1/dr1_magauto.png" on-tap="_dialog" data-item="4">Figure 4. Source counts using SExtractor’s MAG_AUTO quantity.</des-img-big>
 
@@ -307,6 +252,17 @@ paper-dialog{
         </p>
         <p>We summarize in Table 2 the characteristic S/N = 10 thresholds for MAG_AUTO corresponding to δF/F  ~0.1 in each of the g, r, i, z, and Y bands. <a href="javascript:void(0)" on-tap="_dialog" data-item="5"/>Figure 5</a> shows the MAG_AUTO distribution for DES DR1 catalog objects with 0.10837 &lt; MAGERR_AUTO &lt; 0.10877. The spread in these distributions represents comes from the dependence of S/N on source properties (e.g., surface brightness) and survey non-uniformity.</p>
 
+        <div class="parent">
+<paper-dialog id="dialogfig5" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/dr1_coadd_depth_sn10.png">Figure 5. Catalog depth estimated for MAG_AUTO using catalog objects with S/N = 10 (MAGERR_AUTO = 0.10857.</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+    </div>
+
             <des-img src="/static/images/dr1/dr1_coadd_depth_sn10.png" on-tap="_dialog" data-item="5">Figure 5. Catalog depth estimated for MAG_AUTO using catalog objects with S/N = 10 (MAGERR_AUTO = 0.10857.</des-img>
 
 
@@ -315,9 +271,16 @@ paper-dialog{
         <h5 class="fixdown">Depth from image properties</h5>
         <p>It is also possible to estimate the DES DR1 imaging depth using mangle (<a href="http://adsabs.harvard.edu/abs/2004MNRAS.349..115H">Hamilton &amp; Tegmark 2004</a>, <a href="http://adsabs.harvard.edu/abs/2008MNRAS.387.1391S">Swanson et al. 2008</a>), which generates a vectorized map of the survey coverage accounting for the focal plane geometry and imaging artifacts (i.e., bright star masks, bleed trails, satellite trails) (<a href="http://adsabs.harvard.edu/abs/2017arXiv170801531D">Drlica-Wagner et al. 2017</a>, Morganson et al. 2018). The mangle processing produces a coadd weight map from a weighted sum of the single-epoch input images. This weight was converted to the S/N = 10 limiting magnitude for a 2'' diameter aperture, corresponding to the MAG_APER_4 quantity measured by SExtractor (for details, see <a href="http://adsabs.harvard.edu/abs/2017arXiv170801531D">Drlica-Wagner et al. 2017</a>). The median limiting magnitude in the g, r, i, z, and Y bands across the DES footprint is 23.52, 23.10, 22.51, 21.81, 20.61, respectively (<a href="javascript:void(0)" on-tap="_dialog" data-item="6"/>Figure 6</a>).</p>
 
-        <p>
-          <br/>
-        </p>
+        <div class="parent">
+<paper-dialog id="dialogfig6" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/dr1_maglim_hist.png">Figure 6. Catalog depth estimated for a 2'' aperture (MAG_AUTO_4) using mangle.<br /></des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+    </div>
 
        <des-img src="/static/images/dr1/dr1_maglim_hist.png" on-tap="_dialog" data-item="6">Figure 6. Catalog depth estimated for a 2'' aperture (MAG_AUTO_4) using mangle.<br /></des-img>
 
@@ -328,6 +291,17 @@ paper-dialog{
         <p>Object matching is performed using a 1'' radius and we require a robust flux measurement in the respective DES band (15 &lt; MAG_AUTO &lt; 30) that is roughly consistent with that of CFHTLenS (within 1 mag) for an object to count as “detected” in DES DR1.</p>
         <p>The DES DR1 detection efficiency is defined as the fraction of CFHTLenS objects in a given flux interval that has a matched DES object passing the baseline quality cuts listed above, and is expressed in the DES photometric system using converted flux measurement from CFHTLenS. The resulting detection efficiency curves are plotted in <a href="javascript:void(0)" on-tap="_dialog" data-item="7"/>Figure 7</a>. DES DR1 detection efficiencies are only plotted for the magnitude range brighter than the typical S/N = 5 limiting magnitude of CFHTLenS. The 95% completeness magnitude thresholds obtained from this test in the g, r, i, and z bands are 23.72, 23.35, 22.88, and 22.25, respectively. CFHTLenS does not include comparable Y-band coverage.</p>
         <p>Using the same baseline quality selection criteria of FLAGS_[GRIZ] &lt; 4 and IMAFLAGS_ISO_[GRIZ] = 0, we find that in each of <em>griz</em> bands, that  roughly less than 1% of DES objects with MAG_AUTO greater than 20 and less than the typical S/N = 5 limiting magnitude of CFHTLenS lack a matched counterpart in CFHTLenS (<a href="javascript:void(0)" on-tap="_dialog" data-item="7"/>Figure 7</a>). This suggests that contamination from spurious objects in DES DR1 is also roughly 1%.</p>
+
+        <div class="parent">
+<paper-dialog id="dialogfig7" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/dr1_efficiency_contamination_band.png">Figure 7.  DES DR1 detection efficiency and contamination relative to deeper imaging from CFHTLenS. Solid color curves represent the detection efficiency, while dashed color curves show the fraction of unmatched objects appearing only in DES. For visual reference, gray dashed lines indicate 5% and 95% of objects</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+    </div>
 
         <des-img src="/static/images/dr1/dr1_efficiency_contamination_band.png" on-tap="_dialog" data-item="7">Figure 7.  DES DR1 detection efficiency and contamination relative to deeper imaging from CFHTLenS. Solid color curves represent the detection efficiency, while dashed color curves show the fraction of unmatched objects appearing only in DES. For visual reference, gray dashed lines indicate 5% and 95% of objects</des-img>
 
@@ -348,6 +322,59 @@ paper-dialog{
         <p>We evaluate the performance of the example classifier above using three regions in the main body of the DES footprint that overlap fields from HSC-SSP DR1 (<a href="http://adsabs.harvard.edu/abs/2017arXiv170208449A">Aihara et al. 2017b</a>) with typical seeing in the i-band FWHM ~ 0.7'': SXDS (Ultra Deep layer), DEEP2_3 (Deep layer), and portions of VVDS (Wide layer). The areal overlap between these HSCSSP data sets and DES is ~ 18 sq. deg. The HSC-SSP data is of sufficient depth and image quality that a distinct stellar locus is clearly visible in the HSC concentration parameter IMAG_PSF-ICMODEL_MAG to an i-band magnitude of ~24.0. We choose an interval of EXTENDED_COADD values to select stellar or galactic samples with a balance of classification efficiency and purity appropriate for different science cases (<a href="javascript:void(0)" on-tap="_dialog" data-item="8"/>Figure 8</a>, <a href="javascript:void(0)" on-tap="_dialog" data-item="9"/>Figure 9</a>, <a href="javascript:void(0)" on-tap="_dialog" data-item="10"/>Figure 10</a>, <a href="javascript:void(0)" on-tap="_dialog" data-item="11"/>Figure 11</a> and <a href="javascript:void(0)" on-tap="_dialog" data-item="12"/>Figure 12</a>).</p>
 
 
+        <div class="parent">
+<paper-dialog id="dialogfig8" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/y3a2_ext_coadd_scatter.png">Figure 8. Stars and galaxies occupy distinct regions of spreadmodel-space at bright magnitudes, but become more difficult to distinguish at faint magnitudes<br /><br /></des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+
+
+<paper-dialog id="dialogfig9" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/y3a2_ext_coadd_stellar_selection.png">Figure 9.  DES DR1 object classification accuracy versus HSC-SSP for the stellar sample.  By using an interval of EXTENDED_COADD values, the balance of classification efficiency and purity can be adjusted as appropriate for specific science cases.</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+
+
+<paper-dialog id="dialogfig10" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/stellar_density_1024.png">Figure 10. Stellar density map at HEALPix NSIDE = 1024 resolution created with the EXTENDED_COADD = 0 selection described above. Discrete peaks in the stellar density correspond to globular clusters and dwarf galaxies in the Milky Way halo. <br/></des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+
+
+<paper-dialog id="dialogfig11" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/y3a2_ext_coadd_galaxy_selection.png">Figure 11.   DES DR1 object classification accuracy versus HSC-SSP for the galaxy sample.  By using an interval of EXTENDED_COADD values, the balance of classification efficiency and purity can be adjusted as appropriate for specific science cases.</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+
+
+<paper-dialog id="dialogfig12" class="child">
+    <paper-dialog-scrollable>
+       <des-img-big src="/static/images/dr1/galaxy_density_1024.png">Figure 12.  Galaxy density map at HEALPix NSIDE = 1024 resolution created with the EXTENDED_COADD = 3 selection described above. <br /><br /></des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+
+    </div>
+
+
         <div style="display: flex">
             <des-img src="/static/images/dr1/y3a2_ext_coadd_scatter.png" on-tap="_dialog" data-item="8" >Figure 8. Stars and galaxies occupy distinct regions of spreadmodel-space at bright magnitudes, but become more difficult to distinguish at faint magnitudes<br /></des-img>
 
@@ -366,7 +393,21 @@ paper-dialog{
 
 
 
-        <p>We recommend using quantities based on SExtractor SPREAD_MODEL for morphological classification in DR1. Although the SExtractor quantity CLASS_STAR has been commonly used in the past, we find that SPREAD_MODEL based classifiers consistently outperform CLASS_STAR, as exemplified by the receiver operating characteristic (ROC) curve shown in <a href="javascript:void(0)" on-tap="_dialog" data-item="13"/>Figure 13</a>. The ROC curves are generated by performing a simple scan of threshold values for each of SExtractor quantities and using the HSC-SSP classifications described above as a reference. Classifiers based on the weighted averaged SPREAD_MODEL from single epoch detections, WAVG_SPREAD_MODEL, are expected to be more robust for objects that are bright enough to be detected in single-epoch imaging (see Section 4.6). It is expected that classifiers using alternative bands and/or combinations of object measurements will be more appropriate for specific science cases.</p>
+        <p>We recommend using quantities based on SExtractor SPREAD_MODEL for morphological classification in DR1. Although the SExtractor quantity CLASS_STAR has been commonly used in the past, we find that SPREAD_MODEL based classifiers consistently outperform CLASS_STAR, as exemplified by the receiver operating characteristic (ROC) curve shown in <a href="javascript:void(0)" on-tap="_dialog" data-item="13"/>Figure 13</a>.
+
+              <div class="parent">
+<paper-dialog id="dialogfig13" class="child">
+    <paper-dialog-scrollable>
+    <des-img-big src="/static/images/dr1/dr1_roc.png">Figure 13.  Receiver operating characteristic (ROC) curve for a stellar selection in the magnitude range 22.5 &lt; MAG_AUTO_I &lt; 23.0. The SPREAD_MODEL outperforms CLASS_STAR in classification accuracy of DES DR1 objects with respect to HSC-SSP.</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+    </paper-dialog-scrollable>
+</paper-dialog>
+    </div>
+            The ROC curves are generated by performing a simple scan of threshold values for each of SExtractor quantities and using the HSC-SSP classifications described above as a reference. Classifiers based on the weighted averaged SPREAD_MODEL from single epoch detections, WAVG_SPREAD_MODEL, are expected to be more robust for objects that are bright enough to be detected in single-epoch imaging (see Section 4.6). It is expected that classifiers using alternative bands and/or combinations of object measurements will be more appropriate for specific science cases.</p>
+
+
 
          <des-img src="/static/images/dr1/dr1_roc.png" on-tap="_dialog" data-item="13">Figure 13.  Receiver operating characteristic (ROC) curve for a stellar selection in the magnitude range 22.5 &lt; MAG_AUTO_I &lt; 23.0. The SPREAD_MODEL outperforms CLASS_STAR in classification accuracy of DES DR1 objects with respect to HSC-SSP.</des-img>
 

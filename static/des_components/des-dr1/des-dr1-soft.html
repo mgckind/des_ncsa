@@ -26,35 +26,23 @@
     margin: 0 auto;
 }
 
+ div.parent{
+    position:absolute;
+    left:10%;
+    max-width: 1200px;
+
+}
+paper-dialog.child{
+ position: relative;
+ max-width:700px;
+ min-height:100px;
+
+}
+
 </style>
 
 
-<paper-dialog id="dialogfig1">
- <paper-dialog-scrollable>
-   <des-img-big src="/static/images/fig4_desdm_paper.png">Figure 1. DESDM Pipeline. Calibration and raw science images are delivered from DECam by SISPI and DTS to NCSA. In Single Epoch Processing (yellow box), raw science exposures undergo preprocessing and are combined with calibration images to produce First Cut images for initial inspection and Final Cut images for science releases. Images in the Supernova fields are processed with the Supernova Pipeline (blue boxes). Final Cut images and catalogs are sent to Multi-Epoch Processing (pink box), the outputs of which go to the science groups for validation and analysis (gray boxes).</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
-  </paper-dialog-scrollable>
-</paper-dialog>
 
-<paper-dialog id="dialogfig2">
- <paper-dialog-scrollable>
-   <des-img-big src="/static/images/fig5_desdm_paper.png">Figure 2. A diagram of the Preprocessing applied to every exposure. This is a “zoom in” of the the Preprocessing box in Figure 1. This includes our initial masking and detrending with bias and flat images (green and red arrows, respectively). Preprocessed exposures are then processed with the First Cut or Final Cut pipeline.</des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
- </paper-dialog-scrollable>
-</paper-dialog>
-
-<paper-dialog id="dialogfig3">
- <paper-dialog-scrollable>
-   <des-img-big src="/static/images/processing.gif">Figure 3. Simplified animated version of both pipelines showing the final result after coadditon for a selected area of the sky </des-img-big>
-  <div class="buttons">
-    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
-  </div>
- </paper-dialog-scrollable>
-</paper-dialog>
 
 
 <div class="fixup" id="soft_top"></div>
@@ -90,7 +78,19 @@
 <ul>
   <li>Multi Epoch processing. After Final cut, this pipeline is run to achieve a higher depth on the DES footprint. Through the co-addition of overlapping images, execution of algorithms to optimally measure shape parameters, and creation of deeper catalogs, higher level products are obtained, such as Multi Object Fitting (MOF), Multi Epoch Data Structure (MEDS), Weighted Average Magnitudes (WAVG), and Metacalibrations.</li>
 </ul>
-<p>The above pipelines/processings are described in more depth in<a href="http://adsabs.harvard.edu/abs/2017PASP..129k4502B"> Bernstein et al. (2017)</a>, <a href="https://ui.adsabs.harvard.edu/#abs/2017arXiv170801531D">Drlica-Wagner et al. (2017)</a> and Morganson et al (2018). To help the visualization of the above landscape, below we show some of the Morganson et al. (2018) diagrams. Figure 1 shows the schematics of the complete DES Data Management. The Single Epoch, harboring First cut and Final cut, and the Multi Epoch processing are displayed.</p>
+     <p>The above pipelines/processings are described in more depth in<a href="http://adsabs.harvard.edu/abs/2017PASP..129k4502B"> Bernstein et al. (2017)</a>, <a href="https://ui.adsabs.harvard.edu/#abs/2017arXiv170801531D">Drlica-Wagner et al. (2017)</a> and Morganson et al (2018). To help the visualization of the above landscape, below we show some of the Morganson et al. (2018) diagrams. <a href="javascript:void(0)" on-tap="_dialog" data-item="1"/> Figure 1 </a> shows the schematics of the complete DES Data Management. The Single Epoch, harboring First cut and Final cut, and the Multi Epoch processing are displayed.</p>
+
+     <div class="parent">
+
+<paper-dialog id="dialogfig1" class="child">
+ <paper-dialog-scrollable>
+   <des-img-big src="/static/images/fig4_desdm_paper.png">Figure 1. DESDM Pipeline. Calibration and raw science images are delivered from DECam by SISPI and DTS to NCSA. In Single Epoch Processing (yellow box), raw science exposures undergo preprocessing and are combined with calibration images to produce First Cut images for initial inspection and Final Cut images for science releases. Images in the Supernova fields are processed with the Supernova Pipeline (blue boxes). Final Cut images and catalogs are sent to Multi-Epoch Processing (pink box), the outputs of which go to the science groups for validation and analysis (gray boxes).</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+  </paper-dialog-scrollable>
+</paper-dialog>
+</div>
 
   <br/>
   <br/>
@@ -98,6 +98,16 @@
    <des-img-big  src="/static/images/fig4_desdm_paper.png" on-tap="_dialog" data-item="1">Figure 1. DESDM Pipeline. Calibration and raw science images are delivered from DECam by SISPI and DTS to NCSA. In Single Epoch Processing (yellow box), raw science exposures undergo preprocessing and are combined with calibration images to produce First Cut images for initial inspection and Final Cut images for science releases. Images in the Supernova fields are processed with the Supernova Pipeline (blue boxes). Final Cut images and catalogs are sent to Multi-Epoch Processing (pink box), the outputs of which go to the science groups for validation and analysis (gray boxes).</des-img-big>
 
  <p><a href="javascript:void(0)" on-tap="_dialog" data-item="2"/>Figure 2</a> shows the steps comprised on preprocessing, First cut being the upper set of connected boxes, and Final cut belonging to the upper and lower diagram flows. For the latter, current year super-calibrations (generated from each epoch) are employed, in contrast to First cut where previous super-calibrations are selected.</p>
+      <div class="parent">
+<paper-dialog id="dialogfig2" class="child">
+ <paper-dialog-scrollable>
+   <des-img-big src="/static/images/fig5_desdm_paper.png">Figure 2. A diagram of the Preprocessing applied to every exposure. This is a “zoom in” of the the Preprocessing box in Figure 1. This includes our initial masking and detrending with bias and flat images (green and red arrows, respectively). Preprocessed exposures are then processed with the First Cut or Final Cut pipeline.</des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+ </paper-dialog-scrollable>
+</paper-dialog>
+ </div>
 
    <des-img-big src="/static/images/fig5_desdm_paper.png" on-tap="_dialog" data-item="2">Figure 2. A diagram of the Preprocessing applied to every exposure. This is a “zoom in” of the the Preprocessing box in Figure 1. This includes our initial masking and detrending with bias and flat images (green and red arrows, respectively). Preprocessed exposures are then processed with the First Cut or Final Cut pipeline.</des-img-big>
  <p>
@@ -105,6 +115,17 @@
  </p>
 
 <p>Taken as a whole,  one strength of the pipeline is that  the structure allows one to include more refined products to be used in the calibrations. The ability was learned from the work, and it's tangible when comparing initially raw images among the coadded products. This can be evidenced (even not in all its wideness) in the following <a href="javascript:void(0)" on-tap="_dialog" data-item="3"/>Figure 3</a> exhibiting the different products from a single patch of sky, from the raw image to the fully reduced and processed and stacked (higher depth) image:</p>
+
+ <div class="parent">
+<paper-dialog id="dialogfig3" class="child">
+ <paper-dialog-scrollable>
+   <des-img-big src="/static/images/processing.gif">Figure 3. Simplified animated version of both pipelines showing the final result after coadditon for a selected area of the sky </des-img-big>
+  <div class="buttons">
+    <paper-button class="desButton" raised dialog-confirm autofocus>Close</paper-button>
+  </div>
+ </paper-dialog-scrollable>
+</paper-dialog>
+ </div>
 
 
    <des-img-big src="/static/images/processing.gif" on-tap="_dialog" data-item="3">Figure 3. Simplified animated version of both pipelines showing the final result after coadditon for a selected area of the sky </des-img-big>
