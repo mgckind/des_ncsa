@@ -77,26 +77,41 @@
       }
 
 
-    @media only screen and (max-device-width: 800px) {
+    @media only screen and (max-device-width: 900px) {
         .toolbar {
             font-size: 1.8rem;
         }
     }
-    @media only screen and (min-width: 800px) {
-    .smallScreen {
+
+      /* When page size is greater than 1000 px, hide menu button*/
+    @media screen and (min-width: 1000px) {
+         .smallScreen {
         display: none;
-    }}
-        @media all and (max-width: 800px) {
+
+        }
+        .app-menu-item{
+        font-size: 40px;
+        }
+
+    }
+
+       /* When page size is less than 1000 px, hide DES logo */
+        @media  screen and (max-width: 1000px) {
         .toolbar {
             font-size: 1.8rem;
         }
-    .wideScreen {
+
+        .wideScreen {
         display: none;
         }
+
         .toast-position {
             margin-left: 12px;
         }
+
+
     }
+
     .app-menu-item{
         font-size: 20px;
         font-family: Roboto, "Helvetica Neue", serif;
@@ -106,6 +121,7 @@
 
 
 /*Firefox specific styling because app-menu styling doesn't seem to be implemented in Firefox*/
+
         @-moz-document url-prefix() {
 
             #needindent{
@@ -141,6 +157,8 @@
        }
 
     </style>
+
+
 
     <app-location route="{{route}}" ></app-location>
     <app-route
