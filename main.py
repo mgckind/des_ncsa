@@ -60,7 +60,7 @@ class HelpHandler(tornado.web.RequestHandler):
 
 class My404Handler(tornado.web.RequestHandler):
     """
-    Handles 404 requests, basically bust just changin the status to 404
+    Handles 404 requests, basically but just changing the status to 404
     """
     def get(self):
         self.set_status(404)
