@@ -41,6 +41,7 @@
         color: #fff;
         height: 72px;
         background-color: var(--app-primary-color);
+          padding-bottom: 5px;
       }
       app-header paper-icon-button {
         --paper-icon-button-ink-color: purple;
@@ -76,29 +77,51 @@
       }
 
 
-    @media only screen and (max-device-width: 800px) {
+    @media only screen and (max-device-width: 900px) {
         .toolbar {
             font-size: 1.8rem;
         }
     }
-    @media only screen and (min-width: 800px) {
-    .smallScreen {
+
+      /* When page size is greater than 1000 px, hide menu button*/
+    @media screen and (min-width: 1000px) {
+         .smallScreen {
         display: none;
-    }}
-        @media all and (max-width: 800px) {
+
+        }
+        .app-menu-item{
+        font-size: 40px;
+        }
+
+    }
+
+       /* When page size is less than 1000 px, hide DES logo */
+        @media  screen and (max-width: 1000px) {
         .toolbar {
             font-size: 1.8rem;
         }
-    .wideScreen {
+
+        .wideScreen {
         display: none;
         }
+
         .toast-position {
             margin-left: 12px;
         }
+
+
     }
+
+    .app-menu-item{
+        font-size: 22px;
+        font-family: Roboto, "Helvetica Neue", serif;
+        font-weight: 400;
+        background: transparent;
+      }
 
 
 /*Firefox specific styling because app-menu styling doesn't seem to be implemented in Firefox*/
+
         @-moz-document url-prefix() {
 
             #needindent{
@@ -135,6 +158,8 @@
 
     </style>
 
+
+
     <app-location route="{{route}}" ></app-location>
     <app-route
         route="{{route}}"
@@ -167,7 +192,7 @@
      <app-header  condenses slot="header" fixed>
           <app-toolbar >
             <paper-icon-button class = 'smallScreen' icon="icons:menu" on-tap="_openDrawer" ></paper-icon-button>
-              <a href="/" style="text-decoration: none;color: white; padding-top:9px"><iron-image class = "wideScreen" style="width:63px; height:60px; margin-right:10px;" sizing="cover" src="/static/images/DESDM_logo.png"></iron-image></a>
+              <a href="/" style="text-decoration: none;color: white; padding-top:5px"><iron-image class = "wideScreen" style="width:63px; height:60px; margin-right:10px;" sizing="cover" src="/static/images/DESDM_logo.png"></iron-image></a>
             <a href="/" style="text-decoration: none;color:white " ><paper-item main-title class="toolbar">DES Data Management</paper-item></a>
 
             <!--Extra javascript needs to be added later once the site is live for the search bar to work correctly. -->
@@ -264,6 +289,7 @@
                   <app-submenu no-auto-close>
                 <div class="app-menu-item" slot="submenu-trigger">
                   <a class="app-menu-item" id=needindent name="dr1-faq" href="[[rootPath]]releases/dr1/dr1-faq" >DR1 FAQ</a>
+
                 </div>
                 </app-submenu>
                   <app-submenu no-auto-close>

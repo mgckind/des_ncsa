@@ -1,13 +1,97 @@
+<link rel="import" href="des-supported.html">
 <dom-module id="des-view404">
   <template>
-    <style>
+    <style include="shared-styles">
       :host {
         display: block;
         padding: 10px 20px;
+
       }
+
+      .box-watermark-logo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.05;
+      background: url('../../images/DESDM_logo.png');
+      background-size: cover;
+    }
+        #fof{
+    display:block;
+    width:100%;
+    margin:100px 0;
+    line-height:1.6em;
+    text-align:center;
+}
+
+.hgroup h2{
+    text-transform:uppercase;
+}
+
+.hgroup h1{
+    margin-bottom:25px; font-size:70px;
+}
+
+.hgroup h1 span{
+    display:inline-block;
+    margin-left:5px;
+    padding:2px;
+    padding-top: 4px;
+    border:1px solid #CCCCCC;
+    overflow:hidden;
+}
+
+.hgroup h1 span strong{
+    display:inline-block;
+    padding:0 27px 45px;
+    padding-top: 40px;
+    border:1px solid #CCCCCC;
+    font-weight:normal;
+}
+
+.hgroup h2{
+    font-size:60px;
+}
+
+ .hgroup h2 span{
+     display:block;
+     font-size:30px;
+ }
+
+p{
+    margin:25px 0 0 0;
+    padding:0;
+    font-size:16px;
+}
+
+p:first-child{
+    margin-top:0;
+}
+
+
     </style>
 
-    Oops you hit a 404. <a href="[[rootPath]]">Head back to home.</a>
+
+      <div class="wrapper row2" style="text-align: center">
+  <div id="container" class="clear">
+      <section id="fof" class="clear">
+
+      <div class="hgroup">
+        <h1><span><strong>4</strong></span><span><strong>0</strong></span><span><strong>4</strong></span></h1>
+          <h2>Error !</h2><h2><span>Page Not Found</span></h2>
+      </div>
+      <p>For some reason the page you requested could not be found on our server. <br> Please navigate to home or to the previous page.</p>
+              <p>
+          <a style="padding: 20px; text-decoration: none;" href="javascript:history.go(-1)"><paper-button noink raised class="desButton"> Go Back </paper-button></a>
+          <a style="padding: 20px; text-decoration: none;"  href="[[rootPath]]"><paper-button noink raised class="desButton"> Go Home </paper-button></a>
+
+    </section>
+
+  </div>
+
   </template>
 
   <script>

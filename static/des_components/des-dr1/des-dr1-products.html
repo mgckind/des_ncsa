@@ -15,9 +15,44 @@
     text-align: justify;
     font-style: italic;
 }
+
+    des-img, des-img-big{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    }
+
+paper-dialog{
+    display: inline-block;
+    margin-bottom:auto;
+    right: 5%;
+    margin-left: 20px;
+    margin-right:20px;
+    margin-top:20px;
+    max-width: 675px;
+
+ }
+.buttons{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+div.parent{
+    position:absolute;
+    left:10%;
+    max-width: 1200px;
+
+}
+paper-dialog.child{
+ position: relative;
+ max-width:700px;
+ min-height:100px;
+
+}
+
 </style>
-
-
 <paper-dialog id="dialogfig1">
             <des-img-big  src="/static/images/dr1/footprint_h32_tiles.png">
                 Figure 1. DES footprint subdivisions. This figure shows the 10,338 coadd tiles and 1753 HEALPix nside = 32 pixels covered by DR1.
@@ -59,7 +94,7 @@
         <div class="fixup" id="products_intro"></div>
         <h3 class="fixdown">Introduction  &nbsp; &nbsp; <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
         <p>Here we present a summary and description of the individual products included in DES DR1. The primary components of DES DR1 are derived from the union of 10,338 coadd tiles covering the DES footprint. The tile distribution is shown in <a href="javascript:void(0)" on-tap="_dialog" data-item="1"/>Figure 1</a  > and a HEALPix map (NSIDE = 32) of 1753 pixels covering the entire DR1 release is also provided for reference. This map is useful for cross matching sections of the DES footprint with other surveys.</p>
-        <p>In order to provide a convenient way to download all the catalog data at once, and noting that the tile is the basic processing unit for the survey, we have created FITS file versions<br/>of the catalog tables grouped by coadd tile. This amounts to 31,014 total files (for the DR1_MAIN, DR1_MAGNITUDE, and DR1_FLUX tables) with almost 2.5 TB of catalog data. Both the catalog and corresponding image file paths can beobtained from the DR1_TILE_INFO table  and can be accessed through the interfaces.</p>
+        <p>In order to provide a convenient way to download all the catalog data at once, and noting that the tile is the basic processing unit for the survey, we have created FITS file versions<br/>of the catalog tables grouped by coadd tile. This amounts to 31,014 total files (for the DR1_MAIN, DR1_MAGNITUDE, and DR1_FLUX tables) with almost 2.5 TB of catalog data. Both the catalog and corresponding image file paths can beobtained from the DR1_TILE_INFO table  and can be accessed through the interfaces.</p>
             <des-img-big  src="/static/images/dr1/footprint_h32_tiles.png" on-tap="_dialog" data-item="1">
                 Figure 1. DES footprint subdivisions. This figure shows the 10,338 coadd tiles and 1753 HEALPix nside = 32 pixels covered by DR1.
             </des-img-big>
@@ -76,9 +111,9 @@
         <div class="fixup" id="products_catalogs"></div>
         <h3 class="fixdown">Catalogs  &nbsp; &nbsp; <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
         <p>
-        <a href="[[rootpath]]releases/dr1/dr1-products/dr1-schema">DR1 Table Schema</a>    
+        <a href="[[rootpath]]releases/dr1/dr1-products/dr1-schema">DR1 Table Schema</a>
         </p>
-        <p>The coadd source extraction process detected and cataloged 399,263,026 distinct objects. Morphological object information includes object centroids, shape parameters, HEALPix indices, and processing flags. Several different photometric measurements and associated uncertainties are provided including AUTO, PETRO, WAVG_PSF, and assorted aperture magnitudes (Table 1) These measurments are distributed in three database tables: DR1_MAIN, DR1_MAGNITUDE, and DR1_FLUX served from an Oracle database at NCSA. The DR1_MAIN table contains all object information that is not a photometric measurement or uncertainty, augmented by MAG_AUTO and MAG_PETRO (and associated uncertainties) and an extinction corrected versions. The other two tables contain auxiliary magnitude and flux measurements (with associated uncertainties) in addition to extra information which is present in all three tables, like coordinates, flags, and HEALPix indexes. Additionally, the table DR1_TILE_INFO contains information about the processed tiles, such as sky location, geometry, number of objects and file paths to access the images and catalogs generated. </p>
+        <p>The coadd source extraction process detected and cataloged 399,263,026 distinct objects. Morphological object information includes object centroids, shape parameters, HEALPix indices, and processing flags. Several different photometric measurements and associated uncertainties are provided including AUTO, PETRO, WAVG_PSF, and assorted aperture magnitudes (Table 1) These measurments are distributed in three database tables: DR1_MAIN, DR1_MAGNITUDE, and DR1_FLUX served from an Oracle database at NCSA. The DR1_MAIN table contains all object information that is not a photometric measurement or uncertainty, augmented by MAG_AUTO and MAG_PETRO (and associated uncertainties) and an extinction corrected versions. The other two tables contain auxiliary magnitude and flux measurements (with associated uncertainties) in addition to extra information which is present in all three tables, like coordinates, flags, and HEALPix indexes. Additionally, the table DR1_TILE_INFO contains information about the processed tiles, such as sky location, geometry, number of objects and file paths to access the images and catalogs generated. </p>
         <table>
   <colgroup>
     <col/>
@@ -199,7 +234,7 @@
     </tr>
   </tbody>
           <caption align="bottom" class="caption">
-              Table 1. Aperture Magnitudes Diameters
+              Table 1. Aperture Magnitudes Diameters
               <br /></caption>
 </table>
         <p><br/></p>

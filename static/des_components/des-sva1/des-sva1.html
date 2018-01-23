@@ -1,22 +1,58 @@
+<link rel="import" href="../elements.html">
 <dom-module id="des-sva1">
 <template>
 
-<style include="shared-styles"></style>
+<style include="shared-styles">
+    .slides {
+          outline: 0;
+          border: 0;
+          --paper-slide-dot: #eaeaea;
+          --paper-slide-dot-selected: #eaeaea;
+          --paper-slide-dot-styles:{
+          width: 10px;
+          height: 10px;
+          }
+
+      }
+      .slides:focus {
+          outline: 0;
+          border: 0;
+      }
+      .slides:active {
+          outline: 0;
+          border: 0;
+      }
+      .im-slide{
+          outline: 0;
+          border: 0;
+      }
+      .im-slide:focus {
+          outline: 0;
+          border: 0;
+      }
+      .im-slide:active {
+          outline: 0;
+          border: 0;
+      }
+</style>
+    <des-card  heading="DES SVA1 GOLD RELEASE" >
+
+<div class="card-content">
 
 
-<des-card  heading="DES SVA1 GOLD RELEASE" >
-        <div style="text-align: center">
-        <iron-image style="width:375px; height:375px; padding:40px;" sizing="contain"
-                src="/static/images/DESDarkMatterCutouts.jpg"></iron-image>
-            <iron-image style="width:375px; height:375px; padding:40px;" sizing="contain"
-                src="/static/images/sva1_gold_footprint.png"></iron-image>
-            </div>
+       <div style="text-align: center;">
+         <iron-image style="width:375px; height:375px; padding:40px; float: left;" sizing="contain"
+                 src="/static/images/DESDarkMatterCutouts.jpg"></iron-image>
+             <iron-image style="width:375px; height:375px; padding:40px;" sizing="contain"
+                 src="/static/images/sva1_gold_footprint.png"></iron-image>
+             </div>
+
       <div class="card-content">
           This is the unofficial release of the DES Science Verification (SV) data products. For
-          a detailed description and list of available files of this release please see the buttons below.
+          a detailed description of the SV data products and a list of available files please see the buttons below.
           </div>
                 <div class="card-content">
-
+<br>
       <div style="text-align: center">
 
           <a style="padding: 20px; text-decoration: none" href="[[rootPath]]file-content"><paper-button   raised  class="desButton">Files</paper-button></a>

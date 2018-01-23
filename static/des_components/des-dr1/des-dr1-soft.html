@@ -4,7 +4,43 @@
 :host {
     padding: 10px;
 }
+ des-img-big{
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+ paper-dialog{
+    display: inline-block;
+    margin-bottom:auto;
+    right: 5%;
+    max-width:675px;
+    margin-left: 20px;
+    margin-right:20px;
+    margin-top:20px;
+ }
+ .buttons{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+ div.parent{
+    position:absolute;
+    left:10%;
+    max-width: 1200px;
+
+}
+paper-dialog.child{
+ position: relative;
+ max-width:700px;
+ min-height:100px;
+
+}
+
 </style>
+
 
 
 <paper-dialog id="dialogfig1">
@@ -83,7 +119,7 @@
         <p>
    Here we provide a detailed description of the Single-Epoch workflow. Each processing step is described for both First Cut and Final Cut pipelines. For each processing step, we document the parent package with corresponding version number and links to their respective code repositories. Most tools can be found on the <a href="https://github.com/DarkEnergySurvey/">DESDM GitHub repository</a> or on <a href="https://www.astromatic.net/">AstrOmatic</a>.
  </p>
-   
+
 <!--Because of various improvements, you must use the right version of each package for successful processing.-->
 
 <!-- DESDM tools can be found on GitHub (<a href="https://github.com/DarkEnergySurvey/">here</a>), <a href="https://www.astromatic.net/">Astromatic </a>  for astrometr, point spread function (Emmanuel Bertin's group), and the python wrapper for Healpix <a href="http://adsabs.harvard.edu/abs/2005ApJ...622..759G"> (Górski et al. 2005)</a> -->
@@ -1656,16 +1692,16 @@
           </li>
           <li>
             <p>
-              <span>Drlica-Wagner, A., Sevilla-Noarbe, I., Rykoff, E. et al. Dark Energy Survey Year 1 Results: Photometric Data Set for Cosmology  [<span style="color: rgb(255,0,0);"> <a href="https://arxiv.org/abs/1708.01531">
-                    <span style="color: rgb(255,0,0);">arxiv</span> </a>
+              <span>Drlica-Wagner, A., Sevilla-Noarbe, I., Rykoff, E. et al. Dark Energy Survey Year 1 Results: Photometric Data Set for Cosmology  [<span style="color: rgb(255,0,0);"> <a href="https://arxiv.org/abs/1708.01531">
+                    <span style="color: rgb(255,0,0);">arxiv</span> </a>
                 </span>]</span>
             </p>
           </li>
           <li>
-            <p>Górski, K. M., Hivon, E., Banday, A. J., et al. 2005, ApJ, 622, 75. <em>HEALPix: A Framework for High-Resolution Discretization and Fast Analysis of Data Distributed on the Sphere </em>[<span style="color: rgb(255,0,0);"> <a href="http://iopscience.iop.org/article/10.1086/427976/meta"> <span style="color: rgb(255,0,0);">ApJ</span> </a> </span>] [<span style="color: rgb(255,0,0);"> <a href="https://arxiv.org/abs/astro-ph/0409513"> <span style="color: rgb(255,0,0);">arxiv</span> </a> </span>]</p>
+            <p>Górski, K. M., Hivon, E., Banday, A. J., et al. 2005, ApJ, 622, 75. <em>HEALPix: A Framework for High-Resolution Discretization and Fast Analysis of Data Distributed on the Sphere </em>[<span style="color: rgb(255,0,0);"> <a href="http://iopscience.iop.org/article/10.1086/427976/meta"> <span style="color: rgb(255,0,0);">ApJ</span> </a> </span>] [<span style="color: rgb(255,0,0);"> <a href="https://arxiv.org/abs/astro-ph/0409513"> <span style="color: rgb(255,0,0);">arxiv</span> </a> </span>]</p>
           </li>
           <li>Morganson, E., et al. 2018, in preparation</li>
-          <li>Schlegel, D. J., Finkbeiner, D. P., Davis, M, 1998, ApJ, 500, 525. <em>Maps of Dust Infrared Emission for Use in Estimation of Reddening and Cosmic Microwave Background Radiation Foregrounds</em> [<span style="color: rgb(255,0,0);"> <a href="http://iopscience.iop.org/article/10.1086/305772/meta"> <span style="color: rgb(255,0,0);">ApJ</span> </a> </span>] [<span style="color: rgb(255,0,0);"> <a href="https://arxiv.org/abs/astro-ph/9710327"> <span style="color: rgb(255,0,0);">arxiv</span> </a> </span>]<em> </em>
+          <li>Schlegel, D. J., Finkbeiner, D. P., Davis, M, 1998, ApJ, 500, 525. <em>Maps of Dust Infrared Emission for Use in Estimation of Reddening and Cosmic Microwave Background Radiation Foregrounds</em> [<span style="color: rgb(255,0,0);"> <a href="http://iopscience.iop.org/article/10.1086/305772/meta"> <span style="color: rgb(255,0,0);">ApJ</span> </a> </span>] [<span style="color: rgb(255,0,0);"> <a href="https://arxiv.org/abs/astro-ph/9710327"> <span style="color: rgb(255,0,0);">arxiv</span> </a> </span>]<em> </em>
             <em>
               <br/>
             </em>
@@ -1694,7 +1730,6 @@
           var temp = e.target.dataset.item;
           //this.$.dialogfig.open();
           this.shadowRoot.querySelector('#dialogfig'+temp).open();
-
           }
        }
      window.customElements.define(desDr1Soft.is,desDr1Soft);
