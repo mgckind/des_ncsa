@@ -38,13 +38,13 @@
     <h2>
       <strong>Overview</strong>
     </h2>
-    <p>In <a href="https://arxiv.org/abs/2105.13549">DES Collaboration (2022)</a> we present </p>
+    <p>In <a href="https://arxiv.org/abs/2207.05766">DES Collaboration (2022)</a> we present constraints on six extensions to the LambdaCDM cosmological model using a combined analysis of galaxy clustering and weak lensing from the Dark Energy Survey’s first three years of observations.</p>
     
     <div id="ekp_download"></div>
     <h2>
       <strong>Download</strong>
     </h2>
-    <p>Here you can download the cosmology chains in the main extensions 3x2pt analysis plus other supplementary data, like scale cuts info and data associated with tables and plots </p>
+    <p>Here you can download the cosmology chains in the main extensions 3x2pt analysis plus other supplementary data, like the scale cuts used for the analysis of different cosmological models and data associated with several figures and tables in the paper. </p>
     <p>The full listing of downloadable files can be found <strong> <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/chains">here (chains)</a> </strong>, <strong> <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/scale_cuts">here (scale cuts)</a> </strong> and  <strong> <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data">here (associated data)</a> </strong>.  </p>
 
 
@@ -55,11 +55,12 @@
 
     <div id="ekp_cosmochains"></div>
     <h3>Cosmology Chains <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
-    <p>Here we present the cosmological chains ...</p>
+    <p>Here we present the cosmological chains for the various beyond LCDM models presented in the Y3 3x2pt key paper. Information about the model and settings used in each chain are documented in the file headers.</p>
     <p>Chain labels here use same abbreviations listed in <a on-tap="_eglossary">Glossary</a>. Filename format is Chain_[3x2pt data fits file name].[scale cut ini file name].[run label].txt</p>
 <p>The "run label" piece is formatted as [data label]_[model label]_[run info]</p>
 <p>This should be unique for each chain, and use the same data and model abbreviations as listed above.</p>
 <p>Unless otherwise noted, chains were run with polychord in cosmosis. If “-IS” occurs in the run info, the chain is the output of the cosmosis importance sampler.</p>
+<p> When using the chains, you must weight the contribution of each sample according to the weight column. The final N samples to be used are listed at the end of the chain (nsample), along with the final log evidence. <strong>Note that this is a nested sampler, so the sequence of samples is not a random walk</strong>.</p>
 <p>For external data chains which don’t actually rely on a 3x2pt fits file or a scale cut file, those parts of the filename are vestigial and don’t mean anything. They usually match other chains run for a given model.</p>
 
 <!--p>
@@ -358,10 +359,15 @@
 
         <tr>
           <th>
-            <p>Sigma-mu (see google drive)</p>
+            <p>Sigma-mu</p>
           </th>
           <th>File Name</th>
         </tr>
+	<tr>
+		<td colspan="2">
+			<p>For speed, used lite rather than full Planck 2018 likelihood. This is denoted in run names using “_lite_”</p>
+          </td>
+ <tr>
 
         <tr>
 	<td colspan="1">
@@ -492,7 +498,7 @@
 
         <tr>
           <th>
-            <p>Chains not on website, but available upon request</p>
+            <p>Chains not on website, but available upon request through the <a href="[[rootPath]]help">Help form</a></p>
           </th>
         </tr>
 
@@ -576,25 +582,29 @@
       <h3>Associated Data <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
 
       <p>The Y3ext paper reports quite a bit of information in plots containing a lot of points showing parameter estimates, tension metrics, and model comparison tests. While we believe the plots are the most effective way to communicate this information in the paper, readers or people interested in comparing their work to our analysis may be interested in the specific numbers.</p>
-      <p>Thus, we share sets of files that were automatically generated when producing the plots reporting the associated numbers. We will make an effort to document how to read these files below, but if you have questions about how to interpret the files, contact Jessie Muir. </p>
+      <p>Thus, we share sets of files that were automatically generated when producing the plots reporting the associated numbers. We will make an effort to document how to read these files below, but if you have questions about how to interpret the files, please contact DES helpdesk through the <a href="[[rootPath]]help">Help form</a> . </p>
 
       <ul>
 	<p><strong> Figure 1: Simulated analysis marginalized parameter estimates with variations in the synthetic  data vector and model variations </strong></p>
-      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/">fidsimNLA.extparams_tableplot.vals.txt</a> Values used for points in this plot. Columns are: mean, lower bound of 68% CI, upper bound of 68% CI, width of 68% CI, upper error bar size, lower error bar size</li>
-      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/">fidsimNLA.extparams_tableplot.diffs.txt</a> Parameter shift sizes associated with synthetic data and model variations. First column reports shift size evaluated according to the paper’s Eq 30. Second column reports shifts relative to the baseline chain’s 1d marginalized standard deviation.</li>
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/fidsimNLA.extparams_tableplot.vals.txt">fidsimNLA.extparams_tableplot.vals.txt</a> Values used for points in this plot. Columns are: mean, lower bound of 68% CI, upper bound of 68% CI, width of 68% CI, upper error bar size, lower error bar size</li>
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/fidsimNLA.extparams_tableplot.diffs.txt">fidsimNLA.extparams_tableplot.diffs.txt</a> Parameter shift sizes associated with synthetic data and model variations. First column reports shift size evaluated according to the paper’s Equation 31. Second column reports shifts relative to the baseline chain’s 1d marginalized standard deviation.</li>
       <p><strong> Figure 3: Marginalized parameter estimates and shifts due to model variations for the real data </strong></p>
       <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams_tableplot.vals.txt">realy3dat.extparams_tableplot.vals.txt</a> Values used for points in this plot. Format matches that of the equivalent file for Fig 1. 
  </li>
-      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams_tableplot.vals.txt">realy3dat.extparams_tableplot.vals.txt</a> Parameter shift sizes associated with synthetic data and model variations. Format matches that of the equivalent file for Fig 1.
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams_tableplot.diffs.txt">realy3dat.extparams_tableplot.diffs.txt</a> Parameter shift sizes associated with synthetic data and model variations. Format matches that of the equivalent file for Fig 1.
  </li>
       <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams-npg_tableplot.vals.txt">realy3dat.extparams-npg_tableplot.vals.txt</a> Same as above, but showing the derived sigma8^i parameter for the binned sigma8 model
  </li>
       <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams-npg_tableplot.diffs.txt">realy3dat.extparams-npg_tableplot.diffs.txt</a> Same as above, but showing the derived sigma8^i parameter for the binned sigma8 model
  </li>
-  <p><strong>Table IV: table of reported marginalized parameter constraints</strong></p>
+  <p><strong>Table IV: Table of reported marginalized parameter constraints</strong></p>
   <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams_textable_extraout.txt">realy3dat.extparams_textable_extraout.txt</a> Text file containing the various numbers that went into producing the latex table of parameter constraints shown in the paper. Columns are: lower prior bound, upper prior bound, mean,  lower bound of 68% CI, upper bound of 68% CI,  lower bound of 95% CI, upper bound of 95% CI, lower 1-sigma error bar, upper 1-sigma error bar, lower 2-sigma error bar, upper 2-sigma error bar  </li>
+ <p><strong> Figure 11: sigma_8 constraints for the binned sigma_8 model </strong></p>
+ <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/realy3dat.npg_tableplot_sig8.vals.txt">realy3dat.npg_tableplot_sig8.vals.txt</a> Column format matches that of the various “vals.txt” files listed above. </li>
 <p><strong> Figure 13: S8 summary plot - Marginalized constraints on S_8 for various models and data combinations</strong></p>
 <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/realy3dat.S8_tableplot.vals.txt">realy3dat.S8_tableplot.vals.txt</a> Column format matches that of the various “vals.txt” files listed above. </li>
+  <p><strong>Table V: Neutrino mass constraints</strong></p>
+  <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/realy3dat.mnu_textable_extraout.txt">realy3dat.mnu_textable_extraout.txt</a> Format matches that of the file associated with Table IV. </li>
 <p><strong>Figure 15: Tension metric plot</strong></p>
 <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_beyond_lcdm/assoc_data/realy3dat.tension_tableplot.vals.txt">realy3dat.tension_tableplot.vals.txt</a> Column format matches that of the various “vals.txt” files listed above </li>
 <p><strong>Figure 16: Model comparison plot</strong></p>
@@ -637,11 +647,11 @@
       <li>tatt = Model variation, using the TATT IA model instead of NLA  </li>
       <li>xlens = model variation varying the Xlens parameter  </li>
       <li>Alens = model variation varying the A_L parameter  </li>
-      <li>Fixmnu = fixing the sum of neutrino masses to 0.06 eV  </li>
+      <li>fixmnu = fixing the sum of neutrino masses to 0.06 eV  </li>
       <li>hyp = model variation using the hyperrank method of marginalizing over source galaxy photo-z uncertainties  </li>
       <li>nlbias = Simulated analysis run on synthetic data vector with nonlinear bias and baryonic effects added  </li>
-      <li>Eucemu = Simulated analysis run on synthetic data vector generated using the Euclid emulator instead of halofit to produce nonlinear matter power spectrum  </li>
-      <li>Mag3sig = Simulated analysis run on synthetic data vector generated using magnification coefficients that are shifted by 3 sigma relative to values used in baseline model  </li>
+      <li>eucemu = Simulated analysis run on synthetic data vector generated using the Euclid emulator instead of halofit to produce nonlinear matter power spectrum  </li>
+      <li>mag3sig = Simulated analysis run on synthetic data vector generated using magnification coefficients that are shifted by 3 sigma relative to values used in baseline model  </li>
       </ul>
 
 
