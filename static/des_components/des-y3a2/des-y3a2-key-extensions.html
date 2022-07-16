@@ -1,0 +1,684 @@
+<dom-module id="des-y3a2-key-extensions">
+
+
+<template>
+
+      <style include="shared-styles">
+
+
+</style>
+
+<div class="fixup" id="kp_extensions_top"></div>
+
+<des-card heading="Y3KP Extensions">
+	<ul>
+        <li><a href="javascript:void(0)" on-tap="_ekpoverview">Overview</a></li>
+        </ul>
+	<ul>
+        <li><a href="javascript:void(0)" on-tap="_ekdown">Download</a></li>
+        </ul>
+
+	<ul>
+      <li><a href="javascript:void(0)" on-tap="_ecosmochains">Cosmology Chains</a></li>
+      </ul>
+      <ul>
+      <li><a href="javascript:void(0)" on-tap="_escalecuts">Scale Cuts</a></li>
+      </ul>
+
+        <ul>
+      <li><a href="javascript:void(0)" on-tap="_edatavectors">Associated Data</a></li>
+      </ul>
+        <ul>
+      <li><a href="javascript:void(0)" on-tap="_eglossary">Glossary for abbreviations</a></li>
+      </ul>
+
+<div id="keyextensions_overview"></div>
+<div class="card-content">
+
+    <h2>
+      <strong>Overview</strong>
+    </h2>
+    <p>In <a href="https://arxiv.org/abs/2207.05766">DES Collaboration (2022)</a> we present constraints on six extensions to the LambdaCDM cosmological model using a combined analysis of galaxy clustering and weak lensing from the Dark Energy Survey’s first three years of observations.</p>
+    
+    <div id="ekp_download"></div>
+    <h2>
+      <strong>Download</strong>
+    </h2>
+    <p>Here you can download the cosmology chains in the main extensions 3x2pt analysis plus other supplementary data, like the scale cuts used for the analysis of different cosmological models and data associated with several figures and tables in the paper. </p>
+    <p>The full listing of downloadable files can be found <strong> <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains">here (chains)</a> </strong>, <strong> <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/scale_cuts">here (scale cuts)</a> </strong> and  <strong> <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data">here (associated data)</a> </strong>.  </p>
+
+
+    <h2>
+      <strong>Description</strong>
+    </h2>
+
+
+    <div id="ekp_cosmochains"></div>
+    <h3>Cosmology Chains <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+    <p>Here we present the cosmological chains for the various beyond LCDM models presented in the Y3 3x2pt key paper. Information about the model and settings used in each chain are documented in the file headers.</p>
+    <p>Chain labels here use same abbreviations listed in <a on-tap="_eglossary">Glossary</a>. Filename format is Chain_[3x2pt data fits file name].[scale cut ini file name].[run label].txt</p>
+<p>The "run label" piece is formatted as [data label]_[model label]_[run info]</p>
+<p>This should be unique for each chain, and use the same data and model abbreviations as listed above.</p>
+<p>Unless otherwise noted, chains were run with polychord in cosmosis. If “-IS” occurs in the run info, the chain is the output of the cosmosis importance sampler.</p>
+<p> When using the chains, you must weight the contribution of each sample according to the weight column. The final N samples to be used are listed at the end of the chain (nsample), along with the final log evidence. <strong>Note that this is a nested sampler, so the sequence of samples is not a random walk</strong>.</p>
+<p>For external data chains which don’t actually rely on a 3x2pt fits file or a scale cut file, those parts of the filename are vestigial and don’t mean anything. They usually match other chains run for a given model.</p>
+
+<!--p>
+      <br/>The chains are produced using polychord. When using the chains, you must weight the contribution of each sample according to the weight column. The final N samples to be used are listed at the end of the chain (nsample), along with the final log evidence. <b>Note that this is a nested sampler, so the sequence of samples is not a random walk.</b></p>
+    <p> Chains can be used with any cosmological parameter estimation code. A sample python script to visualize the results can be found in <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/chains/read_chains_y3a2.py">read_chains_y3a2.py</a></p> 
+    <p>
+      <br/>
+    </p-->
+
+
+    <table>
+      <colgroup>
+        <col />
+        <col />
+      </colgroup>
+
+      <tbody>
+
+
+        <tr>
+          <th>
+            <p>LCDM baseline chains</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+
+        <tr>
+	<td colspan="1">
+            <p>d3_l_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3_l_nla_realy3dat.txt">chain...d3_l_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-brs_l_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-brs_l_nla_realy3dat.txt">chain...d3-brs_l_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-pbrs_l_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-pbrs_l_nla_realy3dat.txt">chain...d3-pbrs_l_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <p>wCDM</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3_w_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3_w_nla_realy3dat.txt">chain...d3_w_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-brs_w_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-brs_w_nla_realy3dat.txt">chain...d3-brs_w_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-pbrs_w_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-pbrs_w_nla_realy3dat.txt">chain...d3-pbrs_w_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <p>w0wa</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+
+        <tr>
+	<td colspan="1">
+            <p>d3_w0wa_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3_w0wa_nla_realy3dat.txt">chain...d3_w0wa_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>d3-brs_w0wa_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-brs_w0wa_nla_realy3dat.txt">chain...d3-brs_w0wa_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>d3-pbrs_w0wa_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-pbrs_w0wa_nla_realy3dat.txt">chain...d3-pbrs_w0wa_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <p>omega_k</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+
+	<tr>
+		<td colspan="2">
+			<p>Note that to make chains including Planck likelihood tractable, they were initially run with lower resolution camb settings, and then importance sampled with more accurate likelihood. To plot the IS chains, need to compute the correct sample weights. </p>
+          </td>
+ <tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3_ok_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.Y3_ok_scales-jul21_linonly_limberonly_ml.ini.d3_ok_nla_realy3dat.txt">chain...d3_ok_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-brs_ok_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.Y3_ok_scales-jul21_linonly_limberonly_ml.ini.d3-brs_ok_nla_realy3dat.txt">chain...d3-brs_ok_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-pbrs_ok_nla_realy3dat-IS</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.Y3_ok_scales-jul21_linonly_limberonly_ml.ini.d3-pbrs_ok_nla_realy3dat-IS.txt">chain...d3-pbrs_ok_nla_realy3dat-IS.txt</a>
+            </p>
+          </td>
+        </tr>
+
+
+        <tr>
+          <th>
+            <p>Neff</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3_neff_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3_neff_nla_realy3dat.txt">chain...d3_neff_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-brs_neff_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-brs_neff_nla_realy3dat.txt">chain...d3-brs_neff_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-pbrs_neff_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-pbrs_neff_nla_realy3dat.txt">chain...d3-pbrs_neff_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <p>Neff-meff</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+
+        <tr>
+	<td colspan="1">
+            <p>d3_neffmeff-nohf-likesigmu_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.Y3_mg_scales-jul21_linonly_ml.ini.d3_neffmeff-nohf-likesigmu_nla_realy3dat.txt">chain...d3_neffmeff-nohf-likesigmu_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-brs_neffmeff-nohf-likesigmu_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.Y3_mg_scales-jul21_linonly_ml.ini.d3-brs_neffmeff-nohf-likesigmu_nla_realy3dat.txt">chain...d3-brs_neffmeff-nohf-likesigmu_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>d3-pbrs_neffmeff-nohf-likesigmu-DNeffpri047_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.Y3_mg_scales-jul21_linonly_ml.ini.d3-pbrs_neffmeff-nohf-likesigmu-DNeffpri047_nla_realy3dat.txt">chain...d3-pbrs_neffmeff-nohf-likesigmu-DNeffpri047_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>d3-pbrs_neffmeff-nohf-likesigmu-mthpri10_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.Y3_mg_scales-jul21_linonly_ml.ini.d3-pbrs_neffmeff-nohf-likesigmu-mthpri10_nla_realy3dat.txt">chain...d3-pbrs_neffmeff-nohf-likesigmu-mthpri10_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <p>Sigma-mu</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+	<tr>
+		<td colspan="2">
+			<p>For speed, used lite rather than full Planck 2018 likelihood. This is denoted in run names using “_lite_”</p>
+          </td>
+ <tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3_sigmu_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.Y3_mg_scales-feb22_linonly_ml.ini.d3_sigmu_nla_realy3dat.txt">chain...d3_sigmu_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-brs_sigmu_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.Y3_mg_scales-feb22_linonly_ml.ini.d3-brs_sigmu_nla_realy3dat.txt">chain...d3-brs_sigmu_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3-pbrs_sigmu_lite_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.Y3_mg_scales-feb22_linonly_ml.ini.d3-pbrs_sigmu_lite_nla_realy3dat.txt">chain...d3-pbrs_sigmu_lite_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <p>Binned sigma8(z)</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3sr_npg_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3sr_npg_nla_realy3dat.txt">chain...d3sr_npg_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3sr-brs_npg_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3sr-brs_npg_nla_realy3dat.txt">chain...d3sr-brs_npg_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3sr-pbrs_npg_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3sr-pbrs_npg_nla_realy3dat.txt">chain...d3sr-pbrs_npg_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3sr_npg-hyp_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3sr_npg-hyp_nla_realy3dat.txt">chain...d3sr_npg-hyp_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3sr-brs_npg-hyp_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3sr-brs_npg-hyp_nla_realy3dat.txt">chain...d3sr-brs_npg-hyp_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>d3sr-pbrs_npg-hyp_nla_realy3dat</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3sr-pbrs_npg-hyp_nla_realy3dat.txt">chain...d3sr-pbrs_npg-hyp_nla_realy3dat.txt</a>
+            </p>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+
+    <table>
+      <colgroup>
+        <col />
+      </colgroup>
+
+      <tbody>
+
+
+        <tr>
+          <th>
+            <p>Chains not on website, but available upon request through the <a href="[[rootPath]]help">Help form</a></p>
+          </th>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>LCDM with different analysis choices to match extended model setups</p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>External-data chains for extended models and LCDM</p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>Chains run with model variations Xlens, tatt, and hyperrank for robustness tests; available for a subset of data combinations. </p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>LCDM chains run for fixed mnu</p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>Simulated analysis versions of all chains listed above, and simulated chains used for robustness tests</p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>For some LCDM and binned sigma8 chains: outputs containing tabulated sigma8(z) growth functions used to make Fig 12</p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>For some hyperrank chains: versions containing the mean redshift of source galaxy bins computed as a derived parameter</p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>For Omega_k, the lowrescamb versions of chains used as input for the final output IS chains listed above</p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>For Neff-meff - versions of chains run with the fiducial prior, versions of the d3 and d3-brs chains with the DNeff and mth priors imposed using post-processing sample cuts</p>
+          </td>
+        </tr>
+        <tr>
+	<td colspan="1">
+            <p>Anything else used to produce plots and tables for the Y3ext paper</p>
+          </td>
+        </tr>
+
+  </tbody>
+    </table>
+
+
+    <div id="ekp_scalecuts"></div>
+
+      <h3>Scale Cuts <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+
+      <p>In the Y3ext KP, we use a few variations on the scale cuts used for the DES Y3 3x2pt LCDM analysis. The procedure for defining these can be found in Sec II D of the paper.</p> 
+      <p>These files are formatted to match the input expectations of the cosmosis 2pt_like module settings. They thus can be included into cosmosis ini files to use these scale cuts. </p>
+
+      <ul>
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/scale_cuts/scales-ml_3x2pt_8_6_0.5_v0.40.ini">scales-ml_3x2pt_8_6_0.5_v0.40.ini</a> Fiducial scale cuts used for 3x2pt data vector using the 4-bin maglim sample, used for the LCDM, wCDM, w0wa, Neff, and binned sigma8(z) analyses. 
+</li>
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/scale_cuts/Y3_mg_scales-jul21_linonly_ml.ini">Y3_mg_scales-jul21_linonly_ml.ini</a> Linear scale cuts used for Neff-meff model; realized after that analysis was completed that this also accidentally removes one extra data point, which is the bin 4 largest-angle w(theta) measurement</li>
+
+<li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/scale_cuts/Y3_mg_scales-feb22_linonly_ml.ini">Y3_mg_scales-feb22_linonly_ml.ini</a> Linear scale cuts used for Sigma-mu model; updated from July 2021 version to restore the missing datapoint </li>
+
+<li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/scale_cuts/Y3_ok_scales-jul21_linonly_limberonly_ml.ini">Y3_ok_scales-jul21_linonly_limberonly_ml.ini</a> Scale cuts used for Omega_k analysis, which remove both small-angle points affected by nonlinear structure growth and large-angle w(theta) points where non-Limber projection calculations are needed.</li>
+
+      </ul>
+
+
+
+	<div id="ekp_datavectors"></div>
+
+      <h3>Associated Data <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+
+      <p>The Y3ext paper reports quite a bit of information in plots containing a lot of points showing parameter estimates, tension metrics, and model comparison tests. While we believe the plots are the most effective way to communicate this information in the paper, readers or people interested in comparing their work to our analysis may be interested in the specific numbers.</p>
+      <p>Thus, we share sets of files that were automatically generated when producing the plots reporting the associated numbers. We will make an effort to document how to read these files below, but if you have questions about how to interpret the files, please contact DES helpdesk through the <a href="[[rootPath]]help">Help form</a> . </p>
+
+      <ul>
+	<p><strong> Figure 1: Simulated analysis marginalized parameter estimates with variations in the synthetic  data vector and model variations </strong></p>
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/fidsimNLA.extparams_tableplot.vals.txt">fidsimNLA.extparams_tableplot.vals.txt</a> Values used for points in this plot. Columns are: mean, lower bound of 68% CI, upper bound of 68% CI, width of 68% CI, upper error bar size, lower error bar size</li>
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/fidsimNLA.extparams_tableplot.diffs.txt">fidsimNLA.extparams_tableplot.diffs.txt</a> Parameter shift sizes associated with synthetic data and model variations. First column reports shift size evaluated according to the paper’s Equation 31. Second column reports shifts relative to the baseline chain’s 1d marginalized standard deviation.</li>
+      <p><strong> Figure 3: Marginalized parameter estimates and shifts due to model variations for the real data </strong></p>
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams_tableplot.vals.txt">realy3dat.extparams_tableplot.vals.txt</a> Values used for points in this plot. Format matches that of the equivalent file for Fig 1. 
+ </li>
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams_tableplot.diffs.txt">realy3dat.extparams_tableplot.diffs.txt</a> Parameter shift sizes associated with synthetic data and model variations. Format matches that of the equivalent file for Fig 1.
+ </li>
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams-npg_tableplot.vals.txt">realy3dat.extparams-npg_tableplot.vals.txt</a> Same as above, but showing the derived sigma8^i parameter for the binned sigma8 model
+ </li>
+      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams-npg_tableplot.diffs.txt">realy3dat.extparams-npg_tableplot.diffs.txt</a> Same as above, but showing the derived sigma8^i parameter for the binned sigma8 model
+ </li>
+  <p><strong>Table IV: Table of reported marginalized parameter constraints</strong></p>
+  <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/realy3dat.extparams_textable_extraout.txt">realy3dat.extparams_textable_extraout.txt</a> Text file containing the various numbers that went into producing the latex table of parameter constraints shown in the paper. Columns are: lower prior bound, upper prior bound, mean,  lower bound of 68% CI, upper bound of 68% CI,  lower bound of 95% CI, upper bound of 95% CI, lower 1-sigma error bar, upper 1-sigma error bar, lower 2-sigma error bar, upper 2-sigma error bar  </li>
+ <p><strong> Figure 11: sigma_8 constraints for the binned sigma_8 model </strong></p>
+ <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/realy3dat.npg_tableplot_sig8.vals.txt">realy3dat.npg_tableplot_sig8.vals.txt</a> Column format matches that of the various “vals.txt” files listed above. </li>
+<p><strong> Figure 13: S8 summary plot - Marginalized constraints on S_8 for various models and data combinations</strong></p>
+<li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/realy3dat.S8_tableplot.vals.txt">realy3dat.S8_tableplot.vals.txt</a> Column format matches that of the various “vals.txt” files listed above. </li>
+  <p><strong>Table V: Neutrino mass constraints</strong></p>
+  <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/realy3dat.mnu_textable_extraout.txt">realy3dat.mnu_textable_extraout.txt</a> Format matches that of the file associated with Table IV. </li>
+<p><strong>Figure 15: Tension metric plot</strong></p>
+<li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/realy3dat.tension_tableplot.vals.txt">realy3dat.tension_tableplot.vals.txt</a> Column format matches that of the various “vals.txt” files listed above </li>
+<p><strong>Figure 16: Model comparison plot</strong></p>
+<li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/assoc_data/realy3dat.modcomp_tableplot.vals.txt">realy3dat.modcomp_tableplot.vals.txt</a> Column format matches that of the various “vals.txt” files listed above </li>
+
+      </ul>
+
+	<div id="ekp_glossary"></div>
+
+      <h3>Glossary for abbreviations <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+
+      <p>In these files shorthand labels will be used to reference data combinations and models. See the Y3ext paper for a more detailed description of all of these</p>
+
+      <ul>
+	<p><strong> Likelihoods:  </strong></p>
+      <li>d3 = DES Y3 3x2pt, no shear ratio</li>
+      <li>sr = shear ratio</li>
+      <li>b = BAO</li>
+      <li>r = RSD</li>
+      <li>s = pantheon SNe</li>
+      <li>p = Planck 2018</li>
+      <p><strong> Models:  </strong></p>
+      <li> l = LCDM </li>
+      <li> w = wCDM</li>
+      <li> w0wa = w0-wa dynamic dark energy model</li>
+      <li> ok = varying curvature Omega_k</li>
+      <li> neff = varying relativistic degrees of freedom Neff</li>
+      <li> neffmeff-nohf-likesigmu = Massive sterile neutrinos varying Neff and meff. Note that “no hf” means “no halofit,” so linear modeling only, while “-likesigmu” means, use the linear scale cuts in file Y3_mg_scales-jul21_linonly_ml.ini. If there are numbers in files for “neffmeff” without these modifiers, ignore them: they are not using the final and validated form of the Neff meff model and analysis choices.</li>
+      <li> neffmeff-nohf-likesigmu-mthpri10 = Neff-meff model run using prior requiring m_th less than 10eV. Version with "mth10" instead of "mthpri10" is the same, but applies the prior via postprocessing cuts to the chain rather than by rerunning chains with the updated prior. ("pri" in name means chain was rerun)</li>
+      <li> neffmeff-nohf-likesigmu-DNeffpri047 = Neff-meff model run using prior requiring Delta Neff >0.047. Version with “DNeff047” instead of “DNeffpri047” is the same, but applies the prior via postprocessing cuts to the chain rather than by rerunning chains with the updated prior. (“pri” in name means chain was rerun)</li>
+      <li>npg = Binned sigma8(z). NPG stands for “non-parametric growth” </li>
+      <li>l-likeok = LCDM using the same scale cuts as Omega_k, cutting nonlinear and non-Limber scales </li>
+      <li>l-likesigmu = LCDM using the July 2021 version of linear scale cuts </li>
+      <li>l-likealllin = LCDM using the Feb 2022 version of linear scale cuts </li>
+
+
+      <p><strong> Model and synthetic data vector variations:  </strong></p>
+
+      <li>baseline = Uses baseline modeling choices, and for simulated analysis, analysis is of a synthetic data vector generated using the same model as used for parameter estimation  </li>
+      <li>tatt = Model variation, using the TATT IA model instead of NLA  </li>
+      <li>xlens = model variation varying the Xlens parameter  </li>
+      <li>Alens = model variation varying the A_L parameter  </li>
+      <li>fixmnu = fixing the sum of neutrino masses to 0.06 eV  </li>
+      <li>hyp = model variation using the hyperrank method of marginalizing over source galaxy photo-z uncertainties  </li>
+      <li>nlbias = Simulated analysis run on synthetic data vector with nonlinear bias and baryonic effects added  </li>
+      <li>eucemu = Simulated analysis run on synthetic data vector generated using the Euclid emulator instead of halofit to produce nonlinear matter power spectrum  </li>
+      <li>mag3sig = Simulated analysis run on synthetic data vector generated using magnification coefficients that are shifted by 3 sigma relative to values used in baseline model  </li>
+      </ul>
+
+
+
+    <p>
+      <br/>
+    </p>
+
+
+
+</div>
+</des-card>
+</template>
+
+<script>
+    class DesY3A2KeyExtensions extends Polymer.Element {
+      static get is() { return 'des-y3a2-key-extensions'; }
+	    _top() {this.$.kp_extensions_top.scrollIntoView();}
+            _ekpoverview() {this.$.keyextensions_overview.scrollIntoView();}
+	    _ekdown() {this.$.ekp_download.scrollIntoView();}
+            _edatavectors() {this.$.ekp_datavectors.scrollIntoView();}
+            _escalecuts() {this.$.ekp_scalecuts.scrollIntoView();}
+            _ecosmochains() {this.$.ekp_cosmochains.scrollIntoView();}
+            _eglossary() {this.$.ekp_glossary.scrollIntoView();}
+
+    }
+    window.customElements.define(DesY3A2KeyExtensions.is, DesY3A2KeyExtensions);
+  </script>
+
+</dom-module>
