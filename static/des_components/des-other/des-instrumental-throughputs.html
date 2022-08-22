@@ -1,0 +1,110 @@
+<dom-module id="des-instrumental-throughputs">
+
+<template>
+
+    <style include="shared-styles">
+
+</style>
+
+
+    <des-card heading ="DES Per-Detector  Throughputs">
+      <div class="card-content">
+          This page describes the spatially varying per-filter throughputs used for DES Year 3 and later photometric calibration and chromatic corrections
+         (<a href="https://ui.adsabs.harvard.edu/abs/2018AJ....155...41B/abstract" target="_blank">Burke, Rykoff, et al. 2018</a>,
+          <a href="https://ui.adsabs.harvard.edu/abs/2021ApJS..254...24S/abstract" target="_blank">Sevilla-Noarbe, et al. 2021</a>).
+        <br>
+        <hr/>
+      </div>
+      <div class="card-content">
+       <h2>
+        <strong> Input Data </strong>
+        </h2>
+        <p>
+        The data were derived by William Wester from DECam Calibration system ("DECal") scans taken over periodic scans from 2012-2016.
+        DECal is a spectrophotometric calibration system that uses a 2nm wide tunable source to measure the instrumental response
+        function of the telescope from 300nm up to 1100nm. These scans include the transmission function of the instrument including
+        the mirror reflection function, filter transmission functions, and ccd quantum efficiency.
+        They do not include the atmospheric transmission function.
+
+        Some scans showed measurable out-of-band leakage, particularly with the r filter. Further analysis led us to determine
+        that the out-of-band leakage was most likely an artifact of the analysis, and the measurements were consistent with zero.
+        Therefore, for each filter the out-of-band transmission was set to zero explicitly.
+
+        The following csv files contain the results of the analysis from William Wester (FNAL).
+        The columns are wavelength (in Angstroms, with 50 A steps), an instrumental average throughput, one column for each detector (1-62),
+        separate analyses of ccds 31 and 32 amps 1 and 2, and a nominal atmosphere transmission.
+        Note that this nominal atmosphere was not used by the FGCM analysis.
+
+        The scans for ccd 2 are compromised because they were taken when ccd 2 was not operational. Please see below for more details.
+        </p>
+        <ul>
+            <li> <a href="http://desdr-server.ncsa.illinois.edu/desprivate/other_files/instrumental_throughputs/g_band_tput_atm.20170715.csv">DES g filter Wester csv </a> </li>
+            <li> <a href="http://desdr-server.ncsa.illinois.edu/desprivate/other_files/instrumental_throughputs/r_band_tput_atm.20170715.csv">DES r filter Wester csv </a> </li>
+            <li> <a href="http://desdr-server.ncsa.illinois.edu/desprivate/other_files/instrumental_throughputs/i_band_tput_atm.20170715.csv">DES i filter Wester csv </a> </li>
+            <li> <a href="http://desdr-server.ncsa.illinois.edu/desprivate/other_files/instrumental_throughputs/z_band_tput_atm.20170715.csv">DES z filter Wester csv </a> </li>
+            <li> <a href="http://desdr-server.ncsa.illinois.edu/desprivate/other_files/instrumental_throughputs/Y_band_tput_atm.20170715.csv">DES Y filter Wester csv </a> </li>
+        
+        </ul>
+      </div>
+
+      <div class="card-content">
+       <h2>
+        <strong> FGCM Data </strong>
+        </h2>
+        <p>
+        Prior to use within the FGCM photometric calibration, these throughputs were modified slightly by Eli Rykoff (SLAC). In particular:
+        <ul>
+        <li>For CCD 31, the scan from the left (B) amplifier was used (as the other amplifier was non-operational). </li>
+        <li> For CCD 2, the throughput was taken as the average of the throughputs of CCD 1 and 3. This captures the spatial variation of the filter,
+            but unfortunately not the differences in throughput due to different anti-reflective coatings, particularly noticeable for the g filter. </li>
+        <li> The curves have been renormalized so that the i filter throughput in the wavelength range 7350 A < lambda < 8150 A is 1.0. </li>
+        </ul>
+
+        These files are distributed as fits files, with each filter cropped to the wavelength range where there is non-zero throughput.
+        The files have one row for each wavelength step.
+        <ul>
+            <li><code>lambda</code>: Wavelength in A. </li>
+            <li><code>throughput_avg</code>: Average throughput across the focal plane (normalized to i filter as described).
+            <li><code>througput_ccd</code>: 62 columns (for ccd 1 through 62) per-ccd throughput.
+        </ul>
+        
+        Fits files:
+        <ul>
+            <li> <a href="http://desdr-server.ncsa.illinois.edu/desprivate/other_files/instrumental_throughputs/g_band_per_detector_throughput.fits">DES g band per detector throughput</a> </li>
+            <li> <a href="http://desdr-server.ncsa.illinois.edu/desprivate/other_files/instrumental_throughputs/r_band_per_detector_throughput.fits">DES r band per detector throughput </a> </li>
+            <li> <a href="http://desdr-server.ncsa.illinois.edu/desprivate/other_files/instrumental_throughputs/i_band_per_detector_throughput.fits">DES i band per detector throughput </a> </li>
+            <li> <a href="http://desdr-server.ncsa.illinois.edu/desprivate/other_files/instrumental_throughputs/z_band_per_detector_throughput.fits">DES z band per detector throughput </a> </li>
+            <li> <a href="http://desdr-server.ncsa.illinois.edu/desprivate/other_files/instrumental_throughputs/Y_band_per_detector_throughput.fits">DES Y band per detector throughput </a> </li>
+            
+        </ul>
+        </p>
+        
+
+      </div>
+   
+   <div class="card-content">
+    <h2>
+     <strong> Caveats </strong>
+     </h2>
+     <p>
+     <ul>
+         <li>The red end of the g filter throughput is anomalously high for some detectors due to difficulties subtracting the pupil ghost in the analysis.
+         This seems to have negligible effect on broadband photometry.</li>
+         <li> A few of the detectors show significant chromatic residuals in the g filter for stars, indicating some systematic errors in the scans.</li>
+         <li> The normalization ratio from one filter throughput curve to the next is approximately correct, but there are additional absolute calibration
+             adjustments made during final photometric calibration that are not reflected in these transmission curves.</li>
+     </ul>
+
+     </p>
+
+   </div>
+      
+</template>
+<script>
+    class DesInstrumentalThroughputs extends Polymer.Element {
+      static get is() { return 'des-instrumental-throughputs'; }
+    }
+    window.customElements.define(DesInstrumentalThroughputs.is, DesInstrumentalThroughputs);
+  </script>
+
+</dom-module>
