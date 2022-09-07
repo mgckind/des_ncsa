@@ -83,7 +83,7 @@ class HelpConfirmHandler(tornado.web.RequestHandler):
                 )
             except Exception as e:
                 log.error(f'''Error creating Jira ticket: {e}''')
-                self.write('<p>There was an error confirming your form. Please try again.</p><pre>{e}</pre>')
+                self.write(f'''<p>There was an error confirming your form. Please try again.</p><pre>{e}</pre>''')
                 self.set_status(500)
                 self.flush()
                 self.finish()
@@ -122,7 +122,7 @@ class HelpHandler(tornado.web.RequestHandler):
             })
         except Exception as e:
             log.error(f'''Error adding form record: {e}''')
-            self.write('There was an error submitting your form. Please try again.')
+            self.write(f'''<p>There was an error submitting your form. Please try again.</p><pre>{e}</pre>''')
             self.set_status(500)
             self.flush()
             self.finish()
@@ -144,14 +144,14 @@ class HelpHandler(tornado.web.RequestHandler):
                 self.finish()
                 return
             else:
-                self.write('There was an error submitting your form. Please try again.')
+                self.write(f'''<p>There was an error submitting your form. Please try again.</p>''')
                 self.set_status(500)
                 self.flush()
                 self.finish()
                 return
         except Exception as e:
             log.error(f'''Error sending confirmation email to "{email}"''')
-            self.write('There was an error submitting your form. Please try again.')
+            self.write(f'''<p>There was an error submitting your form. Please try again.</p><pre>{e}</pre>''')
             self.set_status(500)
             self.flush()
             self.finish()
