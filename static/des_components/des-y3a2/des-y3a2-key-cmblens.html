@@ -14,15 +14,9 @@
 	<ul>
         <li><a href="javascript:void(0)" on-tap="_cmblenskpoverview">Overview</a></li>
         </ul>
-	<ul>
-        <li><a href="javascript:void(0)" on-tap="_cmblenskdown">Download</a></li>
-        </ul>
 
 	<ul>
       <li><a href="javascript:void(0)" on-tap="_cmblenscosmochains">Cosmology Chains</a></li>
-      </ul>
-      <ul>
-      <li><a href="javascript:void(0)" on-tap="_cmblensscalecuts">Scale Cuts</a></li>
       </ul>
 
         <ul>
@@ -38,11 +32,6 @@
     </h2>
     <p>In <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023531">DES, SPT Collaboration (2023)</a> we present constraints on LambdaCDM and wCDM cosmological models using a combined analysis of galaxy clustering and galaxy weak lensing from the Dark Energy Survey’s first three years of observations, as well as a new CMB lensing map generated using a combination of data from the SPT-SZ survey and the Planck satellite.  Details of the map reconstruction can be found in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023529"> Omori et al. (2023)</a>. Because this adds three two-point functions to the 3x2pt results presented in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.023520"> DES Collaboration (2022)</a>, we refer to the combination of probes as "6x2pt". In addition, we refer to the probe combination that includes DES data (6x2pt without the CMB lensing auto-correlation) as "5x2pt".</p>
     
-    <div id="cmblenskp_download"></div>
-    <h2>
-      <strong>Download</strong>
-    </h2>
-    <p>Here you can download the cosmology chains in the main 6x2pt analysis plus other supplementary data, like the scale cuts used for the analysis of different cosmological models. </p>
 
     <h2>
       <strong>Description</strong>
@@ -51,16 +40,7 @@
 
     <div id="cmblenskp_cosmochains"></div>
     <h3>Cosmology Chains <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
-    <p>Here we present the cosmological chains presented in the Y3 6x2pt key paper. Information about the model and settings used in each chain are documented in the file headers.
-The chains are produced using polychord. When using the chains, you must weight the contribution of each sample according to the weight column. The final N samples to be used are listed at the end of the chain (nsample), along with the final log evidence. Note that this is a nested sampler, so the sequence of samples is not a random walk.</p>
-
-<!--p>
-      <br/>The chains are produced using polychord. When using the chains, you must weight the contribution of each sample according to the weight column. The final N samples to be used are listed at the end of the chain (nsample), along with the final log evidence. <b>Note that this is a nested sampler, so the sequence of samples is not a random walk.</b></p>
-    <p> Chains can be used with any cosmological parameter estimation code. A sample python script to visualize the results can be found in <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/chains/read_chains_y3a2.py">read_chains_y3a2.py</a></p> 
-    <p>
-      <br/>
-    </p-->
-
+    <p>Here we present the cosmological chains presented in the Y3 6x2pt key paper. Information about the model and settings used in each chain are documented in the file headers. The chains are produced using the <a href="https://arxiv.org/abs/1502.01856">Polychord</a> sampler. When using the chains, the contribution of each sample must be weighted using the weight column. The final N samples to be used are listed at the very end of the chain (nsample), along with the final log evidence. Note that this is a nested sampler, so the sequence of samples is not a random walk.</p>
 
     <table>
       <colgroup>
@@ -86,7 +66,7 @@ The chains are produced using polychord. When using the chains, you must weight 
 
           <td colspan="1">
             <p>
-              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3_l_nla_realy3dat.txt">chain_nkgk_lcdm_SR_maglim.txt</a>
+              <a href="https://cloud.des.ncsa.illinois.edu/s/Lpp2HRBXtiWDoty/download/chain_nkgk_lcdm_SR_maglim.txt">chain_nkgk_lcdm_SR_maglim.txt</a>
             </p>
           </td>
         </tr>
@@ -98,7 +78,7 @@ The chains are produced using polychord. When using the chains, you must weight 
 
           <td colspan="1">
             <p>
-              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-brs_l_nla_realy3dat.txt">chain_5x2pt_lcdm_SR_maglim.txt</a>
+              <a href="https://cloud.des.ncsa.illinois.edu/s/JFFLG4kBacqReXm/download/chain_5x2pt_lcdm_SR_maglim.txt">chain_5x2pt_lcdm_SR_maglim.txt</a>
             </p>
           </td>
         </tr>
@@ -110,7 +90,7 @@ The chains are produced using polychord. When using the chains, you must weight 
 
           <td colspan="1">
             <p>
-              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-pbrs_l_nla_realy3dat.txt">chain_6x2pt_lcdm_SR_maglim.txt</a>
+              <a href="https://cloud.des.ncsa.illinois.edu/s/2yR6q5gDn3PQ9g8/download/chain_6x2pt_lcdm_SR_maglim.txt">chain_6x2pt_lcdm_SR_maglim.txt</a>
             </p>
           </td>
         </tr>
@@ -129,7 +109,7 @@ The chains are produced using polychord. When using the chains, you must weight 
 
           <td colspan="1">
             <p>
-              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3_w_nla_realy3dat.txt">chain_5x2pt_wcdm_SR_maglim.txt</a>
+              <a href="hhttps://cloud.des.ncsa.illinois.edu/s/GGBGHW7Z6r2nZAM/download/chain_5x2pt_wcdm_SR_maglim.txt">chain_5x2pt_wcdm_SR_maglim.txt</a>
             </p>
           </td>
         </tr>
@@ -141,7 +121,7 @@ The chains are produced using polychord. When using the chains, you must weight 
 
           <td colspan="1">
             <p>
-              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-brs_w_nla_realy3dat.txt">chain_6x2pt_wcdm_SR_maglim.txt</a>
+              <a href="https://cloud.des.ncsa.illinois.edu/s/EmAS6JRMLKKpaQN/download/chain_6x2pt_wcdm_SR_maglim.txt">chain_6x2pt_wcdm_SR_maglim.txt</a>
             </p>
           </td>
         </tr>
@@ -161,7 +141,7 @@ The chains are produced using polychord. When using the chains, you must weight 
 
           <td colspan="1">
             <p>
-              <a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_beyond_lcdm/chains/chain_2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits.scales-ml_3x2pt_8_6_0.5_v0.40.ini.d3-brs_w_nla_realy3dat.txt">chain_5x2pt_lcdm_SR_redmagic.txt</a>
+              <a href="https://cloud.des.ncsa.illinois.edu/s/M5t8FLTT43CJmd3/download/chain_5x2pt_lcdm_SR_redmagic.txt">chain_5x2pt_lcdm_SR_redmagic.txt</a>
             </p>
           </td>
         </tr>
@@ -176,12 +156,12 @@ The chains are produced using polychord. When using the chains, you must weight 
 
       <h3>Associated Data <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
 
-      <p>These files (with fiducial MagLim- or redMaGiC-based lens samples) include all the 6x2pt data vectors, redshift distributions, and covariance matrix. 
+      <p>These files (with MagLim- or redMaGiC-based lens samples) include the 6x2pt data vectors, redshift distributions, and covariance matrix. 
 There are 11 HDU extensions in the FITS binary files. Extension “xip”, “xim”, “gammat”, “wtheta”, “nz_source”, “nz_lens” are identical to that of the 3x2pt data vector described here. We describe below the content in the remaining extensions. </p>
 
       <ul>
-      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/datavectors/2pt_NG_final_2ptunblind_02_26_21_wnz_maglim_covupdate.fits">y3_5x2_maglim_UNBLIND_07202021_120721_bestfit3x2.fits (MagLim Data Vector)</a></li>
-      <li><a href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/datavectors/2pt_NG_final_2ptunblind_02_24_21_wnz_redmagic_covupdate.fits">y3_5x2_RM_UNBLIND_07202021_120721_bestfit3x2.fits (redMaGiC Data Vector)</a> </li>
+      <li><a href="https://cloud.des.ncsa.illinois.edu/s/dpYZYLYLxx9EpCN/download/y3_5x2_maglim_UNBLIND_07202021_120721_bestfit3x2.fits">y3_5x2_maglim_UNBLIND_07202021_120721_bestfit3x2.fits (MagLim Data Vector)</a></li>
+      <li><a href="https://cloud.des.ncsa.illinois.edu/s/MyeQkXpTfYMTCqo/download/y3_5x2_RM_UNBLIND_07202021_120721_bestfit3x2.fits">y3_5x2_RM_UNBLIND_07202021_120721_bestfit3x2.fits (redMaGiC Data Vector)</a> </li>
       </ul>
 
    <table class="wrapped">
@@ -208,7 +188,7 @@ There are 11 HDU extensions in the FITS binary files. Extension “xip”, “xi
         <tr>
           <td>Image array</td>
           <td>
-            <p>1000x1000 array of covariance matrix (900x900 for redMaGiC-based DV)</p>
+            <p>1400x1400 array of covariance matrix (1260x1260 for redMaGiC-based DV)</p>
           </td>
         </tr>
         <tr>
