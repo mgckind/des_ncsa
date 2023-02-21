@@ -1,0 +1,631 @@
+<dom-module id="des-y3a2-key-cmblens">
+
+
+<template>
+
+      <style include="shared-styles">
+
+
+</style>
+
+<div class="fixup" id="kp_cmblens_top"></div>
+
+<des-card heading="Y3KP + CMB lensing">
+	<ul>
+        <li><a href="javascript:void(0)" on-tap="_cmblenskpoverview">Overview</a></li>
+        </ul>
+
+	<ul>
+      <li><a href="javascript:void(0)" on-tap="_cmblenscosmochains">Cosmology Chains</a></li>
+      </ul>
+
+        <ul>
+      <li><a href="javascript:void(0)" on-tap="_cmblensdatavectors">Associated Data</a></li>
+      </ul>
+
+
+<div id="keycmblens_overview"></div>
+<div class="card-content">
+
+    <h2>
+      <strong>Overview</strong>
+    </h2>
+    <p>In <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023531">DES, SPT Collaboration (2023)</a> we present constraints on LambdaCDM and wCDM cosmological models using a combined analysis of galaxy clustering and galaxy weak lensing from the Dark Energy Survey’s first three years of observations, as well as a new CMB lensing map generated using a combination of data from the SPT-SZ survey and the Planck satellite.  Details of the map reconstruction can be found in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023529"> Omori et al. (2023)</a>. Because this adds three two-point functions to the 3x2pt results presented in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.023520"> DES Collaboration (2022)</a>, we refer to the combination of probes as "6x2pt". In addition, we refer to the probe combination that includes DES data (6x2pt without the CMB lensing auto-correlation) as "5x2pt".</p>
+    
+
+    <h2>
+      <strong>Description</strong>
+    </h2>
+
+
+    <div id="cmblens_cosmochains"></div>
+    <h3>Cosmology Chains <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+    <p>Here we present the cosmological chains presented in the Y3 6x2pt key paper. Information about the model and settings used in each chain are documented in the file headers. The chains are produced using the <a href="https://arxiv.org/abs/1502.01856">Polychord</a> sampler. When using the chains, the contribution of each sample must be weighted using the weight column. The final N samples to be used are listed at the very end of the chain (nsample), along with the final log evidence. Note that this is a nested sampler, so the sequence of samples is not a random walk.</p>
+
+    <table>
+      <colgroup>
+        <col />
+        <col />
+      </colgroup>
+
+      <tbody>
+
+
+        <tr>
+          <th>
+            <p>LCDM</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+
+        <tr>
+	<td colspan="1">
+            <p>Fiducial LCDM galaxy x CMB lensing + shear x CMB lensing (MagLim)</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_cmblens/chains/chain_nkgk_lcdm_SR_maglim.txt">chain_nkgk_lcdm_SR_maglim.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>Fiducial LCDM 5x2pt (MagLim)</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_cmblens/chains/chain_5x2pt_lcdm_SR_maglim.txt">chain_5x2pt_lcdm_SR_maglim.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>Fiducial LCDM 6x2pt (MagLim)</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_cmblens/chains/chain_6x2pt_lcdm_SR_maglim.txt">chain_6x2pt_lcdm_SR_maglim.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <p>wCDM</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>wCDM 5x2pt (MagLim)</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_cmblens/chains/chain_5x2pt_wcdm_SR_maglim.txt">chain_5x2pt_wcdm_SR_maglim.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>wCDM 6x2pt (MagLim)</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_cmblens/chains/chain_6x2pt_wcdm_SR_maglim.txt">chain_6x2pt_wcdm_SR_maglim.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <p>redMaGiC</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+
+        <tr>
+  <td colspan="1">
+            <p>LCDM 5x2pt (redMaGiC)</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_cmblens/chains/chain_5x2pt_lcdm_SR_redmagic.txt">chain_5x2pt_lcdm_SR_redmagic.txt</a>
+            </p>
+          </td>
+        </tr>
+
+
+      </tbody>
+    </table>
+
+
+
+	<div id="cmblens_datavectors"></div>
+
+      <h3>Associated Data <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+
+      <p>These files (with MagLim- or redMaGiC-based lens samples) include the 6x2pt data vectors, redshift distributions, and covariance matrix. 
+There are 11 HDU extensions in the FITS binary files. Extension “xip”, “xim”, “gammat”, “wtheta”, “nz_source”, “nz_lens” are identical to that of the 3x2pt data vector described here. We describe below the content in the remaining extensions. </p>
+
+      <ul>
+      <li><a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_cmblens/assoc_data/y3_5x2_maglim_UNBLIND_07202021_120721_bestfit3x2.fits">y3_5x2_maglim_UNBLIND_07202021_120721_bestfit3x2.fits (MagLim Data Vector)</a></li>
+      <li><a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_cmblens/assoc_data/y3_5x2_RM_UNBLIND_07202021_120721_bestfit3x2.fits">y3_5x2_RM_UNBLIND_07202021_120721_bestfit3x2.fits (redMaGiC Data Vector)</a> </li>
+      </ul>
+
+   <table class="wrapped">
+      <colgroup>
+        <col/>
+        <col/>
+        <col/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th colspan="3">
+            <p>ImageHDU = 1 Name = COVMAT</p>
+            <p>(Covariance matrix)</p>
+          </th>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Image HDU</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>Image array</td>
+          <td>
+            <p>1400x1400 array of covariance matrix (1260x1260 for redMaGiC-based DV)</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Header Value</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>NAME_{i} (in header)</td>
+          <td>The order of the covariance blocks (0-3), corresponding to the names of other HDUs that hold the data vector</td>
+        </tr>
+        <tr>
+          <td>STRT_{i} (in header)</td>
+          <td>The start index of each covariance block (0-3)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="auto-cursor-target">
+      <br/>
+    </p>
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+        <table class="wrapped">
+      <colgroup>
+        <col/>
+        <col/>
+        <col/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th colspan="3">
+            <p>BinTableHDU 6 Name = galaxy_cmbkappa_xi_spt</p>
+            <p>(Galaxy - CMB Lensing correlation function over the SPT patch)</p>
+          </th>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Header Value</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>KERNEL_1</td>
+          <td>
+            <p>The HDU name of the corresponding first (lens) redshift distribution</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">KERNEL_2</td>
+          <td colspan="1">
+            <span>The HDU name of the corresponding second (CMB lensing) redshift distribution</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_1</td>
+          <td colspan="1">The number of <span>first (lens) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_2</td>
+          <td colspan="1">
+            <span>The number of second</span>
+            <span> (CMB lensing) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ANG</td>
+          <td colspan="1">The number of angular bins</td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Column Name</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>BIN1</td>
+          <td>Index of first (lens) redshift bin</td>
+        </tr>
+        <tr>
+          <td>BIN2</td>
+          <td>
+            <span>Index of second (CMB lensing) redshift bin</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">ANGBIN</td>
+          <td colspan="1">Index of the angular bin</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">VALUE</td>
+          <td colspan="1">
+            <span>Measured value</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANGMIN</td>
+          <td colspan="1">The lower angular bin edge [arcmin]</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANGMAX</td>
+          <td colspan="1">The upper angular bin edge [arcmin]</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANG</td>
+          <td colspan="1">Mean measured angular separation [arcmin]</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+        <table class="wrapped">
+      <colgroup>
+        <col/>
+        <col/>
+        <col/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th colspan="3">
+            <p>BinTableHDU 7 Name = shear_cmbkappa_xi_spt</p>
+            <p>(Galaxy shear - CMB Lensing correlation function over the SPT patch)</p>
+          </th>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Header Value</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>KERNEL_1</td>
+          <td>
+            <p>The HDU name of the corresponding first (source) redshift distribution</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">KERNEL_2</td>
+          <td colspan="1">
+            <span>The HDU name of the corresponding second (CMB lensing) redshift distribution</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_1</td>
+          <td colspan="1">The number of <span>first (source) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_2</td>
+          <td colspan="1">
+            <span>The number of second</span>
+            <span> (CMB lensing) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ANG</td>
+          <td colspan="1">The number of angular bins</td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Column Name</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>BIN1</td>
+          <td>Index of first (source) redshift bin</td>
+        </tr>
+        <tr>
+          <td>BIN2</td>
+          <td>
+            <span>Index of second (CMB lensing) redshift bin</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">ANGBIN</td>
+          <td colspan="1">Index of the angular bin</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">VALUE</td>
+          <td colspan="1">
+            <span>Measured value</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANGMIN</td>
+          <td colspan="1">The lower angular bin edge [arcmin]</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANGMAX</td>
+          <td colspan="1">The upper angular bin edge [arcmin]</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANG</td>
+          <td colspan="1">Mean measured angular separation [arcmin]</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+        <table class="wrapped">
+      <colgroup>
+        <col/>
+        <col/>
+        <col/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th colspan="3">
+            <p>BinTableHDU 8 Name = galaxy_cmbkappa_xi_planck</p>
+            <p>(Galaxy - CMB Lensing correlation function over the Planck patch)</p>
+          </th>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Header Value</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>KERNEL_1</td>
+          <td>
+            <p>The HDU name of the corresponding first (lens) redshift distribution</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">KERNEL_2</td>
+          <td colspan="1">
+            <span>The HDU name of the corresponding second (CMB lensing) redshift distribution</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_1</td>
+          <td colspan="1">The number of <span>first (lens) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_2</td>
+          <td colspan="1">
+            <span>The number of second</span>
+            <span> (CMB lensing) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ANG</td>
+          <td colspan="1">The number of angular bins</td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Column Name</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>BIN1</td>
+          <td>Index of first (lens) redshift bin</td>
+        </tr>
+        <tr>
+          <td>BIN2</td>
+          <td>
+            <span>Index of second (CMB lensing) redshift bin</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">ANGBIN</td>
+          <td colspan="1">Index of the angular bin</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">VALUE</td>
+          <td colspan="1">
+            <span>Measured value</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANGMIN</td>
+          <td colspan="1">The lower angular bin edge [arcmin]</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANGMAX</td>
+          <td colspan="1">The upper angular bin edge [arcmin]</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANG</td>
+          <td colspan="1">Mean measured angular separation [arcmin]</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+        <table class="wrapped">
+      <colgroup>
+        <col/>
+        <col/>
+        <col/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th colspan="3">
+            <p>BinTableHDU 9 Name = shear_cmbkappa_xi_planck</p>
+            <p>(Galaxy shear - CMB Lensing correlation function over the Planck patch)</p>
+          </th>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Header Value</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>KERNEL_1</td>
+          <td>
+            <p>The HDU name of the corresponding first (source) redshift distribution</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">KERNEL_2</td>
+          <td colspan="1">
+            <span>The HDU name of the corresponding second (CMB lensing) redshift distribution</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_1</td>
+          <td colspan="1">The number of <span>first (source) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_2</td>
+          <td colspan="1">
+            <span>The number of second</span>
+            <span> (CMB lensing) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ANG</td>
+          <td colspan="1">The number of angular bins</td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Column Name</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>BIN1</td>
+          <td>Index of first (source) redshift bin</td>
+        </tr>
+        <tr>
+          <td>BIN2</td>
+          <td>
+            <span>Index of second (CMB lensing) redshift bin</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">ANGBIN</td>
+          <td colspan="1">Index of the angular bin</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">VALUE</td>
+          <td colspan="1">
+            <span>Measured value</span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANGMIN</td>
+          <td colspan="1">The lower angular bin edge [arcmin]</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANGMAX</td>
+          <td colspan="1">The upper angular bin edge [arcmin]</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">ANG</td>
+          <td colspan="1">Mean measured angular separation [arcmin]</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+      </tbody>
+    </table>
+
+
+
+</div>
+</des-card>
+</template>
+
+<script>
+    class DesY3A2KeyCMBlens extends Polymer.Element {
+      static get is() { return 'des-y3a2-key-cmblens'; }
+        _top() {this.$.kp_cmblens_top.scrollIntoView();}
+        _cmblenskpoverview() {this.$.keycmblens_overview.scrollIntoView();}
+        _cmblenscosmochains() {this.$.cmblens_cosmochains.scrollIntoView();}
+        _cmblensdatavectors() {this.$.cmblens_datavectors.scrollIntoView();}
+
+    }
+    window.customElements.define(DesY3A2KeyCMBlens.is, DesY3A2KeyCMBlens);
+  </script>
+
+</dom-module>
