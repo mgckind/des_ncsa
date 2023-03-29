@@ -5,3 +5,4 @@ __pycache__/
 static/bower_components/*
 .DS_Store
 .codesync
+static/des_components/elements-built.html
