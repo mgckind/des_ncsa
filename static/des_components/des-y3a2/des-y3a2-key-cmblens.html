@@ -19,6 +19,10 @@
       <li><a href="javascript:void(0)" on-tap="_cmblenscosmochains">Cosmology Chains</a></li>
       </ul>
 
+	<ul>
+      <li><a href="javascript:void(0)" on-tap="_likelihood">Likelihood</a></li>
+      </ul>
+	
         <ul>
       <li><a href="javascript:void(0)" on-tap="_cmblensdatavectors">Associated Data</a></li>
       </ul>
@@ -30,7 +34,7 @@
     <h2>
       <strong>Overview</strong>
     </h2>
-    <p>In <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023531">DES, SPT Collaboration (2023)</a> we present constraints on LambdaCDM and wCDM cosmological models using a combined analysis of galaxy clustering and galaxy weak lensing from the Dark Energy Survey’s first three years of observations, as well as a new CMB lensing map generated using a combination of data from the SPT-SZ survey and the Planck satellite.  Details of the map reconstruction can be found in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023529"> Omori et al. (2023)</a>. Because this adds three two-point functions to the 3x2pt results presented in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.023520"> DES Collaboration (2022)</a>, we refer to the combination of probes as "6x2pt". In addition, we refer to the probe combination that includes DES data (6x2pt without the CMB lensing auto-correlation) as "5x2pt".</p>
+    <p>In <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023531">DES, SPT Collaboration (2023)</a> we present constraints on LambdaCDM and wCDM cosmological models from the analysis of galaxy positions and galaxy weak lensing from the Dark Energy Survey’s first three years of observations, as well as a new CMB lensing map generated using a combination of data from the SPT-SZ survey and the Planck satellite.  Details of the CMB lensing map construction can be found in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023529"> Omori et al. (2023)</a>.  From the three fields we consider (galaxy positions, galaxy lensing, CMB lensing) we compute and analyze six two point functions, a combination which we refer to as "6x2pt."  The DES-only 3x2pt combination of probes presented in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.023520"> DES Collaboration (2022)</a> is a subset of the 6x2pt measurements.   We refer to the probe combination that excludes only the CMB lensing autocorrelation as "5x2pt."  Analysis of the subset of two-point functions cross-correlating DES and CMB lensing is described in <a href = "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023530">Chang et al. (2023)</a>.  We present results using both the MagLim galaxy sample (our fiducial analysis) and an alternate redMaGiC galaxy sample. </p>
     
 
     <h2>
@@ -150,7 +154,12 @@
       </tbody>
     </table>
 
+    <div id="likelihood"></div>
 
+    <h3>Likelihood <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+
+    <p>We analyze the two-point functions using a pipeline developed in <a href="https://cosmosis.readthedocs.io/en/latest/">CosmoSIS</a>.  The likelihood calculation for the 5x2pt combination of probes can be accomplished using <a href = "https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/des-y3-6x2.ini">this file</a>.  Note that due to minor updates in CosmoSIS, this calculation differs slightly from the original version presented in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023531">DES, SPT Collaboration 2023</a>.  These differences are very minor, and should not have any noticeable impact on the resultant cosmological constraints.</p>
+     
 
 	<div id="cmblens_datavectors"></div>
 
@@ -623,6 +632,7 @@ There are 11 HDU extensions in the FITS binary files. Extension “xip”, “xi
         _cmblenskpoverview() {this.$.keycmblens_overview.scrollIntoView();}
         _cmblenscosmochains() {this.$.cmblens_cosmochains.scrollIntoView();}
         _cmblensdatavectors() {this.$.cmblens_datavectors.scrollIntoView();}
+        _cmblensdatavectors() {this.$.likelihood.scrollIntoView();}	
 
     }
     window.customElements.define(DesY3A2KeyCMBlens.is, DesY3A2KeyCMBlens);
