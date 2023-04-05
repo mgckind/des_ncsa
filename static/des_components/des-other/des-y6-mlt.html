@@ -1,0 +1,228 @@
+<dom-module id="des-y6-mlt">
+
+<template>
+
+    <style include="shared-styles">
+
+</style>
+
+
+    <des-card heading ="Ultracool dwarfs candidates based on six years of the Dark Energy Survey data">
+        <div style="text-align: center">
+    <a style="padding: 20px; text-decoration: none" href="http://desdr-server.ncsa.illinois.edu/despublic/other_files/y6-mlt/"><paper-button   raised class="desButton">Files</paper-button></a>
+</div>
+      <div class="card-content">
+        <h2>
+  <strong>Overview</strong>
+</h2>
+<p>This catalog contains 19,583 ultracool dwarf candidates brighter than z ≤ 23 selected from the Dark Energy Survey DR2 matched to VHS DR6, VIKING DR5 and AllWISE covering ∼ 4,800 𝑑𝑒𝑔2 in the Southern Hemisphere. The ultracool candidates were first pre-selected based on their (i-z), (z-Y), and (Y-J) colors. They were further classified using a method that compares their optical, near-infrared and mid-infrared colors against templates of M, L and T dwarfs.</p> 
+
+<p>In our previous work presented in <a href="http://adsabs.harvard.edu/abs/2015A%26A...574A..78S">Carnero Rosell et al. (2019)</a> we were able to select a sample of 11,745 L and T dwarf candidates using the first three years of the DES. This new catalog is an expansion in the search for ultracool dwarfs candidates using the full six years of DES observations which allowed us to probe fainter candidates, hence increasing the sample of L and T dwarfs. Besides, we have now available sky coverage of almost the entire DES footprint, whereas in <a href="http://adsabs.harvard.edu/abs/2015A%26A...574A..78S">Carnero Rosell et al. (2019)</a> we only had ∼ 2,400 𝑑𝑒𝑔2.</p>
+
+<p><strong> Reference: <a href="https://arxiv.org/abs/2303.15156">dal Ponte et al. (2023)</a></strong></p>
+
+  <br/>
+</p>
+<p>Please contact <a href="mailto:mdalponte.astro@gmail.com">mdalponte.astro@gmail.com</a> and <a href="mailto:basilio.santiago@ufrgs.br">basilio.santiago@ufrgs.br</a> for questions.</p>
+        <hr/>
+
+        <h2>
+          <strong> Catalog Description</strong> (<a href="http://desdr-server.ncsa.illinois.edu/despublic/other_files/y6-mlt/ultracool_dwarfs_candidate_sample.fits" target="_blank">ultracool_dwarfs_candidate_sample.fits</a>)
+        </h2>
+        <p>Here we describe the columns found in the catalog.</p>
+        <p>
+          <br/>
+        </p>
+        <table >
+          <colgroup>
+            <col />
+            <col />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>Column Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>DES_COADD_OBJECT_ID</td>
+              <td>DES DR2 ID Number</td>
+            </tr>
+            <tr>
+              <td>DES_RA</td>
+              <td>Right Ascension in degrees (J2000).</td>
+            </tr>
+            <tr>
+              <td>DES_DEC</td>
+              <td>Declination in degrees (J2000).</td>
+            </tr>
+            <tr>
+              <td>DES_PSF_MAG_I</td>
+              <td>DES Y6 i band psf magnitude in AB System</td>
+            </tr>
+            <tr>
+              <td>DES_PSF_MAG_I_ERR</td>
+              <td>Error in the DES Y6 i band psf magnitude</td>
+            </tr>
+            <tr>
+              <td>DES_PSF_MAG_Z</td>
+              <td>DES Y6 z band psf magnitude in AB System</td>
+            </tr>
+            <tr>
+              <td>DES_PSF_MAG_Z_ERR</td>
+              <td>Error in the DES Y6 z band psf magnitude</td>
+            </tr>
+            <tr>
+              <td>DES_PSF_MAG_Y</td>
+              <td>DES Y6 Y band psf magnitude in AB System</td>
+            </tr>
+            <tr>
+		<td>DES_PSF_MAG_Y_ERR</td>
+              <td>Error in the DES Y6 Y band psf magnitude</td>
+            </tr>
+            <tr>
+              <td>VHS_VIKING_JAPERMAG3</td>
+              <td>VHS or VIKING J band aper3 magnitude in Vega System </td>
+            </tr>
+            <tr>
+              <td>VHS_VIKING_JAPERMAG3_ERR</td>
+              <td>Error in the VHS or VIKING J band aper3 magnitude</td>
+            </tr>
+            <tr>
+              <td>VHS_VIKING_HAPERMAG3</td>
+              <td>VHS or VIKING H band aper3 magnitude in Vega System</td>
+            </tr>
+            <tr>
+              <td>VHS_VIKING_HAPERMAG3_ERR</td>
+              <td>Error in the VHS or VIKING H band aper3 magnitude</td>
+            </tr>
+            <tr>
+              <td>VHS_VIKING_KSAPERMAG3</td>
+              <td>VHS or VIKING Ks band aper3 magnitude in Vega System</td>
+            </tr>
+            <tr>
+              <td>VHS_VIKING_KSAPERMAG3_ERR</td>
+              <td>Error in the VHS or VIKING Ks band aper3 magnitude</td>
+            </tr>
+            <tr>
+              <td>ALLWISE_W1</td>
+              <td>AllWISE W1 band pro magnitude in Vega System</td>
+            </tr>
+            <tr>
+              <td>ALLWISE_W1_ERR</td>
+              <td>Error in the AllWISE W1 band pro magnitude</td>
+            </tr>
+            <tr>
+              <td>ALLWISE_W2</td>
+              <td>AllWISE W2 band pro magnitude in Vega System</td>
+            </tr>
+            <tr>
+              <td>ALLWISE_W2_ERR</td>
+              <td>Error in the AllWISE W2 band pro magnitude</td>
+            </tr>
+            <tr>
+              <td>PHOTO-TYPE</td>
+	      <td>Numeric value representing the photometric spectral type ranging L0 to T9, with L0 = 10 and T9 = 29</td>
+            </tr>
+            <tr>
+              <td>PHOTOMETRIC_DISTANCE</td>
+              <td>Distance calculated from apparent magnitudes in all the available bands (in parsecs)</td>
+            </tr>
+            <tr>
+              <td>PHOTOMETRIC_DISTANCE_UNC</td>
+              <td>Distance uncertainty</td>
+            </tr>
+            <tr>
+              <td>GAIADR3_SOURCE_ID</td>
+              <td>Gaia DR3 ID Number</td>
+            </tr>
+            <tr>
+              <td>PLX</td>
+              <td>Gaia DR3 parallax (in mas)</td>
+            </tr>
+            <tr>
+              <td>PLX_ERR</td>
+              <td>Error in Gaia DR3 parallax (in mas)</td>
+            </tr>
+            <tr>
+              <td>PMRA_GAIADR3</td>
+              <td>Gaia DR3 proper motion in right ascension direction (in mas/yr)</td>
+            </tr>
+	    <tr>
+              <td>PMRA_GAIADR3_ERR</td>
+              <td>Error in Gaia DR3 proper motion in right ascension direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>PMDEC_GAIADR3</td>
+              <td>Gaia DR3 proper motion in declination direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>PMDEC_GAIADR3_ERR</td>
+              <td>Error in Gaia DR3 proper motion in declination direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>CATWISE2020_OBJECT_ID</td>
+              <td>CatWISE2020 ID Number</td>
+            </tr>
+            <tr>
+              <td>PMRA_CATWISE2020</td>
+              <td>CatWISE2020 proper motion in right ascension direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>PMRA_CATWISE2020_ERR</td>
+              <td>Error in CatWISE2020 proper motion in right ascension direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>PMDEC_CATWISE2020</td>
+              <td>CatWISE2020 proper motion in declination direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>PMDEC_CATWISE2020_ERR</td>
+              <td>Error in CatWISE2020 proper motion in declination direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>NSCDR2_ID</td>
+              <td>NSC DR2 ID Number</td>
+            </tr>
+            <tr>
+              <td>PMRA_NSCDR2</td>
+              <td>NSC DR2 proper motion in right ascension direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>PMRA_NSCDR2_ERR</td>
+              <td>Error in NSC DR2 proper motion in right ascension direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>PMDEC_NSCDR2</td>
+              <td>NSC DR2 proper motion in declination direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>PMDEC_NSCDR2_ERR</td>
+              <td>Error in NSC DR2 proper motion in declination direction (in mas/yr)</td>
+            </tr>
+            <tr>
+              <td>VARIABILITY_FLAG</td>
+              <td>Variable object candidate</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+      </des-card>
+
+
+</template>
+<script>
+    class DesOtherY6mlt extends Polymer.Element {
+      static get is() { return 'des-y6-mlt'; }
+      _scroll(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var temp = e.target.dataset.item;
+          this.shadowRoot.querySelector('#mlt'+temp).scrollIntoView();
+          }
+    }
+    window.customElements.define(DesOtherY6mlt.is, DesOtherY6mlt);
+  </script>
+
+</dom-module>
