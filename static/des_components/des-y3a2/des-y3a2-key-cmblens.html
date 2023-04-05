@@ -20,7 +20,7 @@
       </ul>
 
 	<ul>
-      <li><a href="javascript:void(0)" on-tap="_likelihood">Likelihood</a></li>
+      <li><a href="javascript:void(0)" on-tap="_cmblenslikelihood">Likelihood</a></li>
       </ul>
 	
         <ul>
@@ -154,11 +154,9 @@
       </tbody>
     </table>
 
-    <div id="likelihood"></div>
-
-    <h3>Likelihood <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
-
-    <p>We analyze the two-point functions using a pipeline developed in <a href="https://cosmosis.readthedocs.io/en/latest/">CosmoSIS</a>.  The likelihood calculation for the 5x2pt combination of probes can be accomplished using <a href = "https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/des-y3-6x2.ini">this file</a>.  Note that due to minor updates in CosmoSIS, this calculation differs slightly from the original version presented in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023531">DES, SPT Collaboration 2023</a>.  These differences are very minor, and should not have any noticeable impact on the resultant cosmological constraints.</p>
+    <div id="cmblenslikelihood"></div>
+      <h3>Likelihood <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+      <p>We analyze the two-point functions using a pipeline developed in <a href="https://cosmosis.readthedocs.io/en/latest/">CosmoSIS</a>.  The likelihood calculation for the 5x2pt combination of probes can be accomplished using <a href = "https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/des-y3-6x2.ini">this file</a>.  Note that due to minor updates in CosmoSIS, this calculation differs slightly from the original version presented in <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.107.023531">DES, SPT Collaboration 2023</a>.  These differences are very minor, and should not have any noticeable impact on the resultant cosmological constraints.</p>
      
 
 	<div id="cmblens_datavectors"></div>
@@ -632,7 +630,7 @@ There are 11 HDU extensions in the FITS binary files. Extension “xip”, “xi
         _cmblenskpoverview() {this.$.keycmblens_overview.scrollIntoView();}
         _cmblenscosmochains() {this.$.cmblens_cosmochains.scrollIntoView();}
         _cmblensdatavectors() {this.$.cmblens_datavectors.scrollIntoView();}
-        _cmblensdatavectors() {this.$.likelihood.scrollIntoView();}	
+        _cmblenslikelihood() {this.$.cmblenslikelihood.scrollIntoView();}
 
     }
     window.customElements.define(DesY3A2KeyCMBlens.is, DesY3A2KeyCMBlens);
