@@ -76,19 +76,20 @@
       }
 
 
-    @media only screen and (max-device-width: 800px) {
-        .toolbar {
-            font-size: 1.8rem;
-        }
+    @media only screen and (max-device-width: 1000px) {
+      .toolbar {
+          font-size: 1.8rem;
+      }
     }
-    @media only screen and (min-width: 800px) {
-    .smallScreen {
-        display: none;
-    }}
-        @media all and (max-width: 800px) {
-        .toolbar {
-            font-size: 1.8rem;
-        }
+    @media only screen and (min-width: 1000px) {
+      .smallScreen {
+          display: none;
+      }
+    }
+    @media all and (max-width: 999px) {
+    .toolbar {
+        font-size: 1.8rem;
+    }
     .wideScreen {
         display: none;
         }
@@ -167,8 +168,8 @@
      <app-header  condenses slot="header" fixed>
           <app-toolbar >
             <paper-icon-button class = 'smallScreen' icon="icons:menu" on-tap="_openDrawer" ></paper-icon-button>
-              <a href="/" style="text-decoration: none;color: white; padding-top:9px"><iron-image class = "wideScreen" style="width:63px; height:60px; margin-right:10px;" sizing="cover" src="/static/images/DESDM_logo.png"></iron-image></a>
-            <a href="/" style="text-decoration: none;color:white " ><paper-item main-title class="toolbar">DES Data Management</paper-item></a>
+              <a href="[[rootPath]]" style="text-decoration: none;color: white; padding-top:9px"><iron-image class = "wideScreen" style="width:63px; height:60px; margin-right:10px;" sizing="cover" src="{{rootPath}}static/images/DESDM_logo.png"></iron-image></a>
+            <a href="[[rootPath]]" style="text-decoration: none;color:white " ><paper-item main-title class="toolbar">DES Data Management</paper-item></a>
 
             <!--Extra javascript needs to be added later once the site is live for the search bar to work correctly. -->
             <!-- This is good, we can add it later when with a proper function when ready
@@ -177,7 +178,7 @@
           </app-toolbar>
         </app-header>
 
-    <app-drawer-layout fullbleed narrow="{{narrow}}"  id="drawerLayout" responsive-width="1000px"  style = "height: 80%;">
+    <app-drawer-layout fullbleed narrow="{{narrow}}"  id="drawerLayout" responsive-width="999px"  style = "height: 80%;">
 
       <!-- Drawer content -->
       <app-drawer id="drawer" slot="drawer"  class="drawer-content" swipe-open="[[narrow]]" >
@@ -228,7 +229,7 @@
               <!-- Y1 -->
               <app-submenu no-auto-close>
                 <div class="sublist1" slot="submenu-trigger">
-                <a class="app-menu-item" name="y1a1" href="[[rootPath]]releases/y1a1">Y1 Gold<iron-icon icon="expand-more"></iron-icon></a>
+                <a class="app-menu-item" name="y1a1" href="[[rootPath]]releases/y1a1">Y1 Cosmology<iron-icon icon="expand-more"></iron-icon></a>
                 </div>
 
                 <app-menu class="sublist2" slot="submenu-content">
@@ -278,6 +279,18 @@
                   <a class="app-menu-item" id="needindent" name="density" href="[[rootPath]]releases/y1a1/density">Y1 Density Split</a>
                 </div>
                 </app-submenu>
+                
+                <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="voids" href="[[rootPath]]releases/y1a1/voids">Y1 Voids</a>
+                </div>
+                </app-submenu>
+                
+                <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="voids" href="[[rootPath]]releases/y1a1/photoz">Y1 Photo-z</a>
+                </div>
+                </app-submenu>
 
                   <app-submenu no-auto-close>
                 <div class="app-menu-item" slot="submenu-trigger">
@@ -289,6 +302,104 @@
 
               </app-submenu>
 
+              <!-- Y3 -->
+              <app-submenu no-auto-close>
+                <div class="sublist1" slot="submenu-trigger">
+                <a class="app-menu-item" name="y3a2" href="[[rootPath]]releases/y3a2">Y3 Cosmology<iron-icon icon="expand-more"></iron-icon></a>
+                </div>
+
+                <app-menu class="sublist2" slot="submenu-content">
+		
+
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id=needindent name="Y3gold" href="[[rootPath]]releases/y3a2/Y3gold" persistent="False">Gold Products</a>
+                </div>
+                </app-submenu>
+
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id=needindent name="Y3piff" href="[[rootPath]]releases/y3a2/Y3piff" persistent="False">PSF Modelling</a>
+                </div>
+                </app-submenu>
+
+
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y3balrog" href="[[rootPath]]releases/y3a2/Y3balrog">Balrog Catalogs</a>
+                </div>
+                </app-submenu>
+                  
+		<app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y3deepfields" href="[[rootPath]]releases/y3a2/Y3deepfields">Deep Fields</a>
+                </div>
+                </app-submenu>
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id=needindent name="Y3key-catalogs" href="[[rootPath]]releases/y3a2/Y3key-catalogs" persistent="False">Y3KP Catalogs</a>
+                </div>
+                </app-submenu>
+
+
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y3key-products" href="[[rootPath]]releases/y3a2/Y3key-products">Y3KP Products</a>
+                </div> 
+                </app-submenu>
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y3key-extensions" href="[[rootPath]]releases/y3a2/Y3key-extensions">Y3KP Beyond-L/wCDM</a>
+                </div> 
+                </app-submenu>
+                <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y3key-cmblens" href="[[rootPath]]releases/y3a2/Y3key-cmblens">Y3KP+CMBlens</a>
+                </div> 
+                </app-submenu>
+
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y3bao" href="[[rootPath]]releases/y3a2/Y3bao">BAO Sample</a>
+                </div>
+                </app-submenu>
+                
+		<app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y3redmagic" href="[[rootPath]]releases/y3a2/Y3redmagic">redMaGiC Catalogs</a>
+                </div>
+                </app-submenu>
+                  
+
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y3massmaps" href="[[rootPath]]releases/y3a2/Y3massmaps">WL Mass Maps</a>
+                </div>
+                </app-submenu>
+
+  		
+		<app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y3mard" href="[[rootPath]]releases/y3a2/Y3mard">X-ray Clusters</a>
+                </div>
+                </app-submenu>
+
+  		<app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="gal-morphology" href="[[rootPath]]releases/y3a2/gal-morphology">Galaxy Morphology</a>
+                </div>
+                </app-submenu>
+             
+                  <!--app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="y3a2_files" href="http://desdr-server.ncsa.illinois.edu/despublic/y3a2_files" target="_blank">Files</a>
+                </div>
+                </app-submenu-->
+
+
+                </app-menu>
+
+              </app-submenu>
 
               <!-- SN -->
 
@@ -353,12 +464,56 @@
 
                   <app-submenu no-auto-close>
                 <div class="app-menu-item" slot="submenu-trigger">
-                  <a class="app-menu-item" id=needindent name="dr1-faq" href="[[rootPath]]releases/dr1/dr1-faq" >DR1 FAQ</a>
+                  <a class="app-menu-item" id=needindent name="dr1-faq" href="[[rootPath]]releases/dr1/dr1-faq" >Data Release FAQ</a>
                 </div>
                 </app-submenu>
                   <app-submenu no-auto-close>
                 <div class="app-menu-item" slot="submenu-trigger">
                   <a class="app-menu-item" id=needindent name="dr1-team" href="[[rootPath]]releases/dr1/dr1-team" >DR1 Release Team</a>
+                </div>
+                </app-submenu>
+
+
+                </app-menu>
+               </app-submenu no-auto-close>
+
+
+              <!-- DR2 -->
+               <app-submenu no-auto-close>
+                <div class="sublist1" slot="submenu-trigger">
+                  <a class="app-menu-item" name="dr2" href="[[rootPath]]releases/dr2">DR2<iron-icon icon="expand-more"></iron-icon></a>
+                </div>
+                <app-menu class="sublist2" slot="submenu-content">
+                   <!--<a class="app-menu-item" id=needindent name="dr1files" href="[[rootPath]]releases/dr1/dr1files" >Files</a>-->
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id=needindent name="dr2-docs" href="[[rootPath]]releases/dr2/dr2-docs" persistent="False">Overview<iron-icon icon="expand-more"></iron-icon></a>
+                </div>
+                <app-menu class="sublist3" slot="submenu-content">
+                  <a class="app-menu-item" id=needsindent2 name="dr2-processing" href="[[rootPath]]releases/dr2/dr2-docs/dr2-processing" >Processing</a>
+                  <a class="app-menu-item" id=needsindent2 name="known-issues" href="[[rootPath]]releases/dr2/dr2-docs/known-issues" >Known Issues</a>
+                  <a class="app-menu-item" id=needsindent2 name="dr2-transformations" href="[[rootPath]]releases/dr2/dr2-docs/dr2-transformations" >Photometric Transformations</a>
+                </app-menu>
+                </app-submenu>
+
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id=needindent name="dr2-products" href="[[rootPath]]releases/dr2/dr2-products" persistent="False">Products<iron-icon icon="expand-more"></iron-icon></a>
+                </div>
+                <app-menu class="sublist3" slot="submenu-content">
+                  <a class="app-menu-item" id=needsindent2 name="dr2-schema" href="[[rootPath]]releases/dr2/dr2-products/dr2-schema" >Table Schema</a>
+                </app-menu>
+                </app-submenu>
+
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id=needindent name="dr2-access" href="[[rootPath]]releases/dr2/dr2-access" persistent="False">Data Access</a>
+                </div>
+                </app-submenu>
+
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id=needindent name="dr2-faq" href="[[rootPath]]releases/dr2/dr2-faq" >Data Release FAQ</a>
                 </div>
                 </app-submenu>
 
@@ -380,6 +535,18 @@
                   <a class="app-menu-item" id="needindent" name="paper-data" href="[[rootPath]]releases/other/paper-data">Ancillary paper data</a>
                 </div>
                 </app-submenu>
+                  
+                  <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="instrumental-throughputs" href="[[rootPath]]releases/other/instrumental-throughputs">Instrumental Throughputs</a>
+                </div>
+                </app-submenu>
+                
+		<app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="y1-dmass" href="[[rootPath]]releases/other/y1-dmass" >Y1 DMASS</a>
+                </div>
+                </app-submenu>
 
                   <app-submenu no-auto-close>
                 <div class="app-menu-item" slot="submenu-trigger">
@@ -394,16 +561,47 @@
                 </app-submenu>
 
 
+
                   <app-submenu no-auto-close>
                 <div class="app-menu-item" slot="submenu-trigger">
                   <a class="app-menu-item" id="needindent" name="y3-lt-widebinaries" href="[[rootPath]]releases/other/y3-lt-widebinaries">Y3 LT WideBinaries</a>
                 </div>
                 </app-submenu>
                 
-                
+                   <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="y3-morphCNN" href="[[rootPath]]releases/other/y3-morphCNN">Y3 MorphCNN</a>
+                </div>
+                </app-submenu>
+
+               
                 <app-submenu no-auto-close>
                 <div class="app-menu-item" slot="submenu-trigger">
                   <a class="app-menu-item" id="needindent" name="y3-lsbg" href="[[rootPath]]releases/other/y3-lsbg">Y3 LSBG</a>
+                </div>
+                </app-submenu>
+
+                 <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="quadruply-qso-method" href="[[rootPath]]releases/other/quadruply-qso-method">Lensed QSOs</a>
+                </div>
+                </app-submenu>
+               
+                <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="y6-rrl" href="[[rootPath]]releases/other/y6-rrl" >Y6 RR Lyrae</a>
+                </div>
+                </app-submenu>
+                
+		<app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y6-LTdwarfs" href="[[rootPath]]releases/other/Y6-LTdwarfs" >Y6 LT,M dwarfs</a>
+                </div>
+                </app-submenu>
+
+                <app-submenu no-auto-close>
+                <div class="app-menu-item" slot="submenu-trigger">
+                  <a class="app-menu-item" id="needindent" name="Y6-standards" href="[[rootPath]]releases/other/Y6-standards" >Y6 Standard Stars</a>
                 </div>
                 </app-submenu>
 
@@ -462,9 +660,25 @@
                 <des-y1a1-key-redmapper name="key-redmapper"></des-y1a1-key-redmapper>
               <des-y1a1-bao name="bao"></des-y1a1-bao>
               <des-y1a1-density name="density"></des-y1a1-density>
+              <des-y1a1-voids name="voids"></des-y1a1-voids>
+              <des-y1a1-photoz name="photoz"></des-y1a1-photoz>
               <des-y1a1-key-products name="key-products"></des-y1a1-key-products>
-          <!-- SN PAGES -->
-              <des-sn name="sn"></des-sn>
+          <!-- Y3A2 pages -->
+              <des-y3a2 name="y3a2"></des-y3a2>
+              <des-y3a2-gold name="Y3gold"></des-y3a2-gold>
+              <des-y3a2-psf name="Y3piff"></des-y3a2-psf>
+              <des-y3a2-key-catalogs name="Y3key-catalogs"></des-y3a2-key-catalogs >
+              <des-y3a2-key-products name="Y3key-products"></des-y3a2-key-products >
+              <des-y3a2-key-extensions name="Y3key-extensions"></des-y3a2-key-extensions >
+              <des-y3a2-key-cmblens name="Y3key-cmblens"></des-y3a2-key-cmblens >
+	      <des-y3a2-balrog name="Y3balrog"></des-y3a2-balrog >
+	      <des-y3a2-deepfields name="Y3deepfields"></des-y3a2-deepfields >
+              <des-y3a2-bao name="Y3bao"></des-y3a2-bao >
+              <des-y3a2-redmagic name="Y3redmagic"></des-y3a2-redmagic >
+                <des-y3a2-massmaps name="Y3massmaps"></des-y3a2-massmaps >
+              <des-y3a2-morphology name="gal-morphology"></des-y3a2-morphology>
+              <des-y3a2-mard name="Y3mard"></des-y3a2-mard>
+
 
           <!-- DR1 PAGES -->
             <des-dr1 name="dr1"></des-dr1>
@@ -481,20 +695,45 @@
             <des-dr1-linea name="dr1-linea"></des-dr1-linea>
             <des-dr1-faq name="dr1-faq"></des-dr1-faq>
             <des-dr1-team name="dr1-team"></des-dr1-team>
+          
+           <!-- DR2 PAGES -->
+
+            <des-dr2 name="dr2"></des-dr2>
+            <des-dr2docs name="dr2-docs"></des-dr2docs>
+            <des-dr2-products name="dr2-products"></des-dr2-products>
+            <des-dr2-schema name="dr2-schema"></des-dr2-schema>
+            <des-dr2-access name="dr2-access"></des-dr2-access>
+            <des-dr2-soft name="dr2-processing"></des-dr2-soft>
+            <des-dr2-transformations name="dr2-transformations"></des-dr2-transformations>
+            <des-dr2-interpolations name="dr2-interpolations"></des-dr2-interpolations>
+            <!-- FAQ and NCSA access are common for DR1 and DR2-->
+            <des-dr1-faq name="dr2-faq"></des-dr1-faq>
+            <des-dr1-ncsa name="dr2-ncsa"></des-dr1-ncsa>
+
+	    <!-- SN PAGES -->
+              <des-sn name="sn"></des-sn>
 
            <!-- Other Releases -->
               <des-other name="other"></des-other>
+              <des-y1-dmass name="y1-dmass"></des-y1-dmass>
               <des-y3-rrl name="y3-rrl"></des-y3-rrl>
               <des-y3-mlt name="y3-mlt"></des-y3-mlt>
+              <des-y3-morphCNN name="y3-morphCNN"></des-y3-morphCNN>
               <des-y3-lt-widebinaries name="y3-lt-widebinaries"></des-y3-lt-widebinaries>
               <des-y3-lsbg name="y3-lsbg"></des-y3-lsbg>
+              <des-quadruply-qso-method name="quadruply-qso-method"></des-quadruply-qso-method>
+              <des-y6-rrl name="y6-rrl"></des-y6-rrl>
+              <des-y6-mlt name="Y6-LTdwarfs"></des-y6-mlt>
+              <des-y6-standards name="Y6-standards"></des-y6-standards>
               <des-paper-data name="paper-data"></des-paper-data>
+              <des-instrumental-throughputs name="instrumental-throughputs"></des-instrumental-throughputs>
 
           <!-- Other pages -->
           <des-help name="help"></des-help>
           <des-thankyou name="thanks"></des-thankyou>
           <des-terms name="terms"></des-terms>
           <des-about name="about"></des-about>
+          <des-easyweb name="easyweb"></des-easyweb>
           <des-limited name="limited"></des-limited>
           <des-view404 name="view404"></des-view404>
         </iron-pages>
@@ -513,6 +752,16 @@
 
   <script>
     class DesPublic extends Polymer.Element {
+      ready() { 
+        super.ready();
+        let pageHierarchy = window.location.pathname.substr(window.location.pathname.search(this.rootPath)+1).split('/');
+        for (let pg in pageHierarchy) {
+          if (this.shadowRoot.querySelector('a[name='+pageHierarchy[pg]+']') !== null) {
+            console.log('clicking page')
+            this.shadowRoot.querySelector('a[name='+pageHierarchy[pg]+']').click();
+          }
+        }
+       }
       static get is() { return 'des-public-main'; }
       static get properties() {
         return {

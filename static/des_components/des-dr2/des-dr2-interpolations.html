@@ -1,0 +1,275 @@
+<dom-module id="des-dr2-interpolations">
+
+
+<template>
+
+<style include="shared-styles">
+:host {
+       display: block;
+       padding: 10px;
+       }
+</style>
+
+<des-card heading = 'DR2 Transformation Interpolations'>
+    <div class=card-content >
+        <h2><strong>Overview</strong></h2>
+        <p>
+
+        You can use the interpolation CSV files below to convert data from one photometric system to the other via interpolation methods. The files contain the delta_mag vs color locus in bins of (typically) 0.1-mag binsize along the color axis.
+        Here is some python code that takes the interpolation CSV file for the transformation from ATLAS-REFCAT2 g-band to DES g-band to using the ATLAS-REFCAT2 g mag and ATLAS-REFCAT2 g-i color. The code makes use of the scipy "interpolate" routine.
+        </p>
+        
+        <code>
+            <pre>
+            import pandas as pd
+            from scipy import interpolate
+
+            # Read in interpolation file...
+            df_interp = pd.read_csv('transInterp.ref2_to_des.g_gi_ref2.csv')  # interpolation file for g-band
+
+            # Create linear interpolation of the median dmag vs. color bin calculated above...
+            response = interpolate.interp1d(df_interp.bin_label.values.astype(float), df_interp.bin_median.values, \
+                                            bounds_error=False, fill_value=0., kind='linear')
+
+            # Read in file with data to be transformed...
+            df = pd.read_csv(inputFile)   # The following assumes a column with ATLAS-REFCAT2 in (g-i) in this file.
+            df['offset'] = response(df['gi_ref2'].values)
+            df['g_des'] = df['g_ref2'] - df['offset']
+            </pre>
+        </code>
+        
+        <h2>SDSS to DES</h2>
+        <ul>
+          <li>g, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.sdss_to_des.g_gi_sdss.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.sdss_to_des.g_gi_sdss.csv" target="_blank">csv</a>
+          </li>
+          <li>r, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.sdss_to_des.r_gi_sdss.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.sdss_to_des.r_gi_sdss.csv" target="_blank">csv</a>
+          </li>
+          <li>i, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.sdss_to_des.i_gi_sdss.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.sdss_to_des.i_gi_sdss.csv" target="_blank">csv</a>
+          </li>
+          <li>z, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.sdss_to_des.z_gi_sdss.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.sdss_to_des.z_gi_sdss.csv" target="_blank">csv</a>
+          </li>
+        </ul>
+        
+        <h2>DES to SDSS </h2>
+        <ul>
+          <li>g, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_sdss.g_gi_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_sdss.g_gi_des.csv" target="_blank">csv</a>
+          </li>
+          <li>r, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_sdss.r_gi_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_sdss.r_gi_des.csv" target="_blank">csv</a>
+          </li>
+          <li>i, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_sdss.i_gi_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_sdss.i_gi_des.csv" target="_blank">csv</a>
+          </li>
+          <li>z, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_sdss.z_gi_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_sdss.z_gi_des.csv" target="_blank">csv</a>
+          </li>
+        </ul>
+        
+        <h2>PS1 to DES </h2>
+        <ul>
+          <li>g, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.ps1_to_des.g_gi_ps1.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.ps1_to_des.g_gi_ps1.csv" target="_blank">csv</a>
+          </li>
+          <li>r, r-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.ps1_to_des.r_ri_ps1.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.ps1_to_des.r_ri_ps1.csv" target="_blank">csv</a>
+          </li>
+          <li>i, r-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.ps1_to_des.i_ri_ps1.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.ps1_to_des.i_ri_ps1.csv" target="_blank">csv</a>
+          </li>
+          <li>z, r-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.ps1_to_des.z_ri_ps1.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.ps1_to_des.z_ri_ps1.csv" target="_blank">csv</a>
+          </li>
+          <li>Y, r-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.ps1_to_des.Y_ri_ps1.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.ps1_to_des.Y_ri_ps1.csv" target="_blank">csv</a>
+          </li>
+        </ul>
+
+        <h2>DES to PS1 </h2>
+        <ul>
+          <li>g, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_ps1.g_gi_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_ps1.g_gi_des.csv" target="_blank">csv</a>
+          </li>
+          <li>r, r-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_ps1.r_ri_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_ps1.r_ri_des.csv" target="_blank">csv</a>
+          </li>
+          <li>i, r-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_ps1.i_ri_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_ps1.i_ri_des.csv" target="_blank">csv</a>
+          </li>
+          <li>z, r-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_ps1.z_ri_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_ps1.z_ri_des.csv" target="_blank">csv</a>
+          </li>
+          <li>Y, r-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_ps1.Y_ri_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_ps1.Y_ri_des.csv" target="_blank">csv</a>
+          </li>
+        </ul>
+
+        <h2>ATLAS-REFCAT2 to DES </h2>
+        <ul>
+          <li>g, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.ref2_to_des.g_gi_ref2.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.ref2_to_des.g_gi_ref2.csv" target="_blank">csv</a>
+          </li>
+          <li>r, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.ref2_to_des.r_gi_ref2.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.ref2_to_des.r_gi_ref2.csv" target="_blank">csv</a>
+          </li>
+          <li>i, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.ref2_to_des.i_gi_ref2.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.ref2_to_des.i_gi_ref2.csv" target="_blank">csv</a>
+          </li>
+          <li>z, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.ref2_to_des.z_gi_ref2.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.ref2_to_des.z_gi_ref2.csv" target="_blank">csv</a>
+          </li>
+        </ul>
+        
+        <h2>DES to ATLAS-REFCAT2 </h2>
+        <ul>
+          <li>g, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_ref2.g_gi_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_ref2.g_gi_des.csv" target="_blank">csv</a>
+          </li>
+          <li>r, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_ref2.r_gi_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_ref2.r_gi_des.csv" target="_blank">csv</a>
+          </li>
+          <li>i, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_ref2.i_gi_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_ref2.i_gi_des.csv" target="_blank">csv</a>
+          </li>
+          <li>z, g-i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_ref2.z_gi_des.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_ref2.z_gi_des.csv" target="_blank">csv</a>
+          </li>
+        </ul>
+        
+        <h2>Johnson-Cousins to DES </h2>
+        <ul>
+          <li>V, B-V to g
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.steton_to_des.g_des_V_BV.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.steton_to_des.g_des_BV.csv" target="_blank">csv</a>
+          </li>
+          <li>V, R-I to g
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.steton_to_des.g_des_V_RI.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.steton_to_des.g_des_RI.csv" target="_blank">csv</a>
+          </li>
+          <li>R, R-I to r
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.steton_to_des.r_des_R_RI.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.steton_to_des.r_des_RI.csv" target="_blank">csv</a>
+          </li>
+          <li>I, R-I to i
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.steton_to_des.i_des_I_RI.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.steton_to_des.i_des_RI.csv" target="_blank">csv</a>
+          </li>
+          <li>I, R-I to z
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.steton_to_des.z_des_I_RI.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.steton_to_des.z_des_RI.csv" target="_blank">csv</a>
+          </li>
+          <li>I, R-I to Y
+          <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.steton_to_des.Y_des_I_RI.png" target="_blank">png</a>
+          <a href="{{rootPath}}static/images/dr2_interp/transInterp.steton_to_des.Y_des_RI.csv" target="_blank">csv</a>
+          </li>
+        </ul>
+    
+    <h2>DES to Johnson-Cousins</h2>
+    <ul>
+      <li>g, g-r to B
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_stetson.B_g_des_gr_des.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_stetson.B_gr_des.csv" target="_blank">csv</a>
+      </li>
+      <li>g, g-r to V
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_stetson.V_g_des_gr_des.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_stetson.V_gr_des.csv" target="_blank">csv</a>
+      </li>
+      <li>g, g-i to V
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_stetson.V_g_des_gi_des.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_stetson.V_gi_des.csv" target="_blank">csv</a>
+      </li>
+      <li>r, r-i to R
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_stetson.R_r_des_ri_des.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_stetson.R_ri_des.csv" target="_blank">csv</a>
+      </li>
+      <li>r, r-i to I
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_stetson.I_i_des_ri_des.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_stetson.I_ri_des.csv" target="_blank">csv</a>
+      </li>
+    </ul>
+    
+    <h2>Gaia EDR3 to DES</h2>
+    Here, we used 0.05-mag bins along the BP-RP color axis.(Similar to Fig. 3 of <a href="https://arxiv.org/pdf/2105.08200.pdf">Thanjavur et al. 2021</a>)
+    <ul>
+      <li>G, BP-RP to g
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.gaia_to_des.g_des_BP_RP_gaia.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.gaia_to_des.g_des_BP_RP_gaia.csv" target="_blank">csv</a>
+      </li>
+      <li>G, BP-RP to r
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.gaia_to_des.r_des_BP_RP_gaia.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.gaia_to_des.r_des_BP_RP_gaia.csv" target="_blank">csv</a>
+      </li>
+      <li>G, BP-RP to i
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.gaia_to_des.i_des_BP_RP_gaia.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.gaia_to_des.i_des_BP_RP_gaia.csv" target="_blank">csv</a>
+      </li>
+      <li>G, BP-RP to z
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.gaia_to_des.z_des_BP_RP_gaia.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.gaia_to_des.z_des_BP_RP_gaia.csv" target="_blank">csv</a>
+      </li>
+      <li>G, BP-RP to Y
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.gaia_to_des.Y_des_BP_RP_gaia.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.gaia_to_des.Y_des_BP_RP_gaia.csv" target="_blank">csv</a>
+      </li>
+    </ul>
+    
+    
+    <h2>DES to Gaia EDR3</h2>
+    Here, we used 0.05-mag bins along the BP-RP color axis. (Similar to Fig. 3 of <a href="https://arxiv.org/pdf/2105.08200.pdf">Thanjavur et al. 2021</a>)
+
+    <ul>
+      <li>i, g-i to G
+      <a href="{{rootPath}}static/images/dr2_interp/qaPlot_transInterp.des_to_gaia.G_gaia_gi_des.png" target="_blank">png</a>
+      <a href="{{rootPath}}static/images/dr2_interp/transInterp.des_to_gaia.G_gaia_gi_des.csv" target="_blank">csv</a>
+      </li>
+    </ul>
+    
+    
+    <h2>Acknowledgments</h2>
+    If you use these transformation interpolations, please acknowledge the upcoming paper Allam, Tucker, et al. (in prep.).
+    <hr>
+    </div>
+
+
+
+</des-card>
+
+</template>
+<script>
+    class DesDr2Interpolations extends Polymer.Element {
+      static get is() { return 'des-dr2-interpolations'; }
+    }
+    window.customElements.define(DesDr2Interpolations.is, DesDr2Interpolations);
+  </script>
+
+</dom-module>

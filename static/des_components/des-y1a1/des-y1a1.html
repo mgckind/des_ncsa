@@ -4,12 +4,12 @@
 <style include="shared-styles"></style>
 
 
-<des-card  heading="DES Y1 RELEASE" >
+<des-card  heading="Y1 COSMOLOGY DATA RELEASE" >
         <div style="text-align: center">
         <iron-image style="width:395px; height:395px; padding:40px;" sizing="contain"
-                src="/static/images/y1a1/mass.png"></iron-image>
+                src="{{rootPath}}static/images/y1a1/mass.png"></iron-image>
             <iron-image style="width:375px; height:375px; padding:40px;" sizing="contain"
-                src="/static/images/y1a1/y1a1_footprint.png"></iron-image>
+                src="{{rootPath}}static/images/y1a1/y1a1_footprint.png"></iron-image>
             </div>
       <div class="card-content">
           <span>
@@ -20,7 +20,7 @@
 
           <a style="padding: 20px; text-decoration: none" href="http://desdr-server.ncsa.illinois.edu/despublic/y1a1_files/" target="_blank"><paper-button   raised  class="desButton">Files</paper-button></a>
               <paper-button   raised  class="desButton" on-click="_scroll"> Data Summary</paper-button>
-          <a style="padding: 20px; text-decoration: none" href="[[rootpath]]help"><paper-button   raised class="desButton">Help</paper-button></a>
+          <a style="padding: 20px; text-decoration: none" href="[[rootPath]]help"><paper-button   raised class="desButton">Help</paper-button></a>
       </div>
       <hr />
       <h2>
@@ -31,7 +31,11 @@
       <p style="margin-left: 60.0px;">2) <a href="[[rootPath]]releases/y1a1/key-catalogs">Y1KP catalogs</a>: This section contains additional science catalogs based on different reduction pipelines. We include the "Multi-object" fitting (MOF) photometry (and their depth maps), photometric redshifts based on MOF, the PSF and shape catalogs used in the weak lensing analyses and the redMaGiC and redMaPPer galaxy catalogs (based on MOF).</p>
       <p style="margin-left: 60.0px;">3) <a href="[[rootPath]]releases/y1a1/key-products">Y1KP products</a>: Data vectors and likelihoods from the main DES cosmological analysis (3x2pt statistics), combining weak lensing and galaxy clustering. These results used the Y1KP Catalogs described above.</p>
       <p style="margin-left: 60.0px;">4) <a href="[[rootPath]]releases/y1a1/bao">Y1 BAO sample</a>: a subset of Gold products aimed at measuring the BAO scale; includes the catalogs, data vectors and likelihoods. The selection was based in a combination of the Y1 Gold catalog and MOF photometry.</p>
-      <p style="margin-left: 60.0px;">5) <a href="[[rootPath]]releases/y1a1/density">Y1 density split statistics</a>: Data vectors and likelihoods for measuring density split statistics. These results used the Y1KP catalogs described above<strong>.</strong>
+      <p style="margin-left: 60.0px;">5) <a href="[[rootPath]]releases/y1a1/density">Y1 density split statistics</a>: Data vectors and likelihoods for measuring density split statistics. These results used the Y1KP catalogs described above</p>
+      <p style="margin-left: 60.0px;">6) <a href="[[rootPath]]releases/y1a1/voids">Y1 Voids</a>: DES Y1 Void Catalogs.
+        <span style="color: rgb(255,0,0);"> </span>
+      </p>
+      <p style="margin-left: 60.0px;">7) <a href="[[rootPath]]releases/y1a1/photoz">Y1 DNF Photoz</a>: DES Y1A1 photoz by DNF code
         <span style="color: rgb(255,0,0);"> </span>
       </p>
       <p style="text-align: left;">
