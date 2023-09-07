@@ -1,0 +1,471 @@
+<dom-module id="des-y3a2-key-joint-des-kids">
+
+
+<template>
+
+      <style include="shared-styles"></style>
+
+<div class="fixup" id="kp_joint_des_kids_top"></div>
+<div class="fixdown"></div>
+
+<des-card heading='DES Y3 + KiDS-1000'>
+	<ul>
+        <li><a href="javascript:void(0)" on-tap="_joint_des_kidskpoverview">Overview</a></li>
+        </ul>
+
+	<ul>
+      <li><a href="javascript:void(0)" on-tap="_joint_des_kidscosmochains">Cosmology Chains</a></li>
+      </ul>
+
+	<ul>
+      <li><a href="javascript:void(0)" on-tap="_joint_des_kidslikelihood">Likelihood</a></li>
+      </ul>
+	
+        <ul>
+      <li><a href="javascript:void(0)" on-tap="_joint_des_kidsdatavectors">Associated Data</a></li>
+      </ul>
+
+
+<div id="keyjoint_des_kids_overview"></div>
+<div class="card-content">
+
+    <h2>
+      <strong>Overview</strong>
+    </h2>
+    <p>In <a href="https://arxiv.org/abs/2305.17173">Dark Energy Survey and Kilo-Degree Survey 
+      Collaboration (2023)</a> we present a joint cosmic shear analysis of the Dark Energy Survey (DES Y3) and the 
+      Kilo-Degree Survey (<a href="https://kids.strw.leidenuniv.nl/DR4/lensing.php"></a>KiDS-1000</a>) in a collaborative 
+      effort between the two survey teams. We use a Hybrid analysis pipeline, defined from a mock survey study quantifying the 
+      impact of the different analysis choices originally adopted by each survey team.
+
+    <h2>
+      <strong>Description</strong>
+    </h2>
+
+
+    <div id="joint_des_kids_cosmochains"></div>
+    <h3>Cosmology Chains <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+    <p>Download the cosmological chains presented in the DES Y3 + KiDS-1000 joint analysis. 
+      Information about the adopted model and settings are documented in the file headers and 
+      summarised in Table 2 of <a href="https://arxiv.org/abs/2305.17173">Dark Energy Survey and Kilo-Degree Survey 
+      Collaboration (2023)</a>
+      
+    When using the chains, the contribution of each sample must be weighted using the weight column. 
+    The final N samples to be used are listed at the very end of the chain (nsample), along with the final log evidence. 
+    Note that this chain used the Polychord nested sampler, so the sequence of samples is not a random walk.</p>
+
+    <table>
+      <colgroup>
+        <col />
+        <col />
+      </colgroup>
+
+      <tbody>
+
+
+        <tr>
+          <th>
+            <p>LCDM</p>
+          </th>
+          <th>File Name</th>
+        </tr>
+
+
+        <tr>
+	<td colspan="1">
+            <p>Joint DES Y3 + KiDS-1000 cosmic shear</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_joint-des-kids/chains/chain_desy3_and_kids1000_hybrid_analysis.txt">chain_desy3_and_kids1000_hybrid_analysis.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>Hybrid pipeline re-analysis of DES Y3 cosmic shear</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_joint-des-kids/chains/chain_desy3_hybrid_analysis.txt">chain_desy3_hybrid_analysis.txt</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+	<td colspan="1">
+            <p>Hybrid pipeline re-analysis of KiDS-1000 cosmic shear</p>
+          </td>
+
+          <td colspan="1">
+            <p>
+              <a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_joint-des-kids/chains/chain_kids1000_hybrid_analysis.txt">chain_kids1000_hybrid_analysis.txt</a>
+            </p>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div id="joint_des_kids_likelihood"></div>
+      <h3>Likelihood <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+      <p>We analyze the two-point functions using a pipeline developed in <a href="https://cosmosis.readthedocs.io/en/latest/">CosmoSIS</a>.  
+        The likelihood calculation for the combination of DES and KiDS can be accomplished using <a href = "https://github.com/joezuntz/cosmosis-standard-library/blob/main/examples/des-y3_and_kids-1000.ini">this file</a>.  
+        Note that due to minor updates in CosmoSIS, this calculation differs very slightly from the original version presented in
+        <a href="https://arxiv.org/abs/2305.17173">Dark Energy Survey and Kilo-Degree Survey 
+          Collaboration (2023)</a>, but we have verified that there is no noticeable impact on the cosmological constraints.</p>
+
+     <p> If you wish to analyse KiDS-1000 using correlated priors for the redshift nuisance parameters, 
+      see <a href="https://github.com/joezuntz/cosmosis-standard-library/tree/main/likelihood/des-y3_and_kids-1000/nofz_covariance">this 
+        CosmoSIS directory</a> </p>
+
+	<div id="joint_des_kids_datavectors"></div>
+
+      <h3>Associated Data <a style="font-size:0.72rem" href="javascript:void(0)" on-tap="_top">(Top)</a></h3>
+
+      <p>This fits table includes: the DES Y3 two-point correlation functions measured from a slightly reduced footprint to remove
+        areal overlap with KiDS-1000 (see <a href="https://arxiv.org/abs/2305.17173">Appendix A</a> for details); the KiDS-1000 
+        COSEBIs E-modes; redshift distributions; analytical covariance matrices.   Note that we assume DES Y3 and KiDS-1000 are independent. 
+        There are the following 6 HDU extensions in the FITS binary file. 
+      <ul>
+      <li><a href="https://desdr-server.ncsa.illinois.edu/despublic/y3a2_files/y3a2_joint-des-kids/assoc_data/DES-Y3_xipm_and_KiDS-1000_COSEBIs_2.0_300.0.fits">DES-Y3_xipm_and_KiDS-1000_COSEBIs_2.0_300.0.fits</a></li>
+      </ul>
+
+  <table class="wrapped">
+        <colgroup>
+          <col/>
+          <col/>
+          <col/>
+        </colgroup>
+        <tbody>
+          <tr>
+            <th colspan="3">
+              <p>BinTableHDU 1 and 2:  Name = nz_source_kids/nz_source_des</p>
+              <p>(Tomographic redshift distribution of the source galaxies)</p>
+            </th>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <strong>
+                <strong>Header Value</strong>
+              </strong>
+            </td>
+            <td colspan="1">
+              <strong>Description</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>NGAL_{i}</td>
+            <td>
+              <p>The mean number density (gal/arcmin^2) of the tomographic bin (1-5, KiDS) or (1-4, DES)</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="1">SIG_E_{i}</td>
+            <td colspan="1">The total ellipticity dispersion of the tomographic bin (1-5, KiDS) or (1-4, DES)</td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <strong>Column Name</strong>
+            </td>
+            <td colspan="1">
+              <strong>Description</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>Z_LOW</td>
+            <td>The lower z boundary of this z bin range</td>
+          </tr>
+          <tr>
+            <td>Z_MID</td>
+            <td>The central z <span>of this z bin range</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="1">Z_HIGH</td>
+            <td colspan="1">The upper z boundary <span>of this z bin range</span>
+            </td>
+          </tr>
+          <tr>
+      <td colspan="1">BIN{i}</td>
+            <td colspan="1">The n(z) in this z bin range for tomographic bin (1-5, KiDS) or (1-4, DES)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="auto-cursor-target">
+        <br/>
+      </p>   
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+    <table class="wrapped">
+      <colgroup>
+        <col/>
+        <col/>
+        <col/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th colspan="3">
+            <p>BinTableHDU 3:  Name = En</p>
+            <p>(KiDS-1000 Cosmic shear E<span>n</span>
+              <span> COSEBIs</span>)</p>
+          </th>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>
+              <strong>Header Value</strong>
+            </strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>KERNEL_1</td>
+          <td>
+            <p>The HDU name of the corresponding first (source) redshift distribution</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">KERNEL_2</td>
+          <td colspan="1">
+            <span>The HDU name of the corresponding second (source) redshift distribution</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_1</td>
+          <td colspan="1">The number of <span>first (source) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_2</td>
+          <td colspan="1">
+            <span>The number of second</span>
+            <span> (source) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ANG</td>
+          <td colspan="1">The number of COSEBIs modes</td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Column Name</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>BIN1</td>
+          <td>Index of first (source) redshift bin</td>
+        </tr>
+        <tr>
+          <td>BIN2</td>
+          <td>
+            <span>Index of second (source) redshift bin</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">ANGBIN</td>
+          <td colspan="1">Index of the COSEBIs mode</td>
+        </tr>
+        <tr>
+          <td colspan="1">VALUE</td>
+          <td colspan="1">
+            <span>Measured value</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">ANG</td>
+          <td colspan="1">Index of the COSEBIs mode</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="auto-cursor-target">
+      <br/>
+    </p>
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+    <table class="wrapped">
+      <colgroup>
+        <col/>
+        <col/>
+        <col/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th colspan="3">
+            <p>BinTableHDU 4 and 5:  Name = xip and xim</p>
+            <p>(Cosmic shear xi<span>+/-</span>
+              <span> two-point shear correlation function</span>)</p>
+          </th>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>
+              <strong>Header Value</strong>
+            </strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>KERNEL_1</td>
+          <td>
+            <p>The HDU name of the corresponding first (source) redshift distribution</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">KERNEL_2</td>
+          <td colspan="1">
+            <span>The HDU name of the corresponding second (source) redshift distribution</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_1</td>
+          <td colspan="1">The number of <span>first (source) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ZBIN_2</td>
+          <td colspan="1">
+            <span>The number of second</span>
+            <span> (source) tomographic bins</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">N_ANG</td>
+          <td colspan="1">The number of angular bins</td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Column Name</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>BIN1</td>
+          <td>Index of first (source) redshift bin</td>
+        </tr>
+        <tr>
+          <td>BIN2</td>
+          <td>
+            <span>Index of second (source) redshift bin</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">ANGBIN</td>
+          <td colspan="1">Index of the angular bin</td>
+        </tr>
+	<tr>
+          <td colspan="1">ANGMIN</td>
+          <td colspan="1">The lower angular bin edge [arcmin]</td>
+        </tr>
+	<tr>
+          <td colspan="1">ANGMAX</td>
+          <td colspan="1">The upper angular bin edge [arcmin]</td>
+        </tr>
+
+        <tr>
+          <td colspan="1">VALUE</td>
+          <td colspan="1">
+            <span>Measured value</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">ANG</td>
+          <td colspan="1">Mean angular separation [arcmin]</td>
+        </tr>
+        <tr>
+          <td colspan="1">NPAIRS</td>
+          <td colspan="1">Number of galaxy pairs in the bin</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="auto-cursor-target">
+      <br/>
+    </p>
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+   <table class="wrapped">
+      <colgroup>
+        <col/>
+        <col/>
+        <col/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th colspan="3">
+            <p>ImageHDU = 1: Name = COVMAT</p>
+            <p>(Covariance matrix)</p>
+          </th>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Image HDU</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>Image array</td>
+          <td>
+            <p>475x475 array of covariance matrix </p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <strong>Header Value</strong>
+          </td>
+          <td colspan="1">
+            <strong>Description</strong>
+          </td>
+        </tr>
+        <tr>
+          <td>NAME_{i} (in header)</td>
+          <td>The order of the covariance blocks (0-2), corresponding to the names of other HDUs that hold the data vector</td>
+        </tr>
+        <tr>
+          <td>STRT_{i} (in header)</td>
+          <td>The start index of each covariance block (0-2)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="auto-cursor-target">
+      <br/>
+    </p>
+
+      </tbody>
+    </table>
+
+
+
+</div>
+</des-card>
+</template>
+
+<script>
+    class DesY3A2Keyjoint_des_kids extends Polymer.Element {
+      static get is() { return 'des-y3a2-key-joint-des-kids'; }
+        _top() {this.$.kp_joint_des_kids_top.scrollIntoView();}
+        _joint_des_kidskpoverview() {this.$.keyjoint_des_kids_overview.scrollIntoView();}
+        _joint_des_kidscosmochains() {this.$.joint_des_kids_cosmochains.scrollIntoView();}
+        _joint_des_kidsdatavectors() {this.$.joint_des_kids_datavectors.scrollIntoView();}
+        _joint_des_kidslikelihood() {this.$.joint_des_kids_likelihood.scrollIntoView();}
+
+    }
+    window.customElements.define(DesY3A2Keyjoint_des_kids.is, DesY3A2Keyjoint_des_kids);
+  </script>
+
+</dom-module>

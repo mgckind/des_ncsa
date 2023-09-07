@@ -19,6 +19,12 @@ Workflow for contributing content updates
     ```shell
     docker build -t desdm-public:dev .
     ```
+
+    or on MacOS:
+    ```shell
+    docker build --platform linux/x86_64 -t desdm-public:dev .
+    ```
+
 4. Configure the webserver to run in "dev" mode.
     ```shell
     docker run --rm --name desdm-public \
@@ -30,6 +36,9 @@ Workflow for contributing content updates
       desdm-public:dev \
       python3 vulcan.py --dev
     ```
+
+    again adding the flag ``--platform linux/x86_64`` on MacOS
+
 5. Run the webserver to serve the webpage.
     ```shell
     docker run --rm --name desdm-public \
@@ -41,6 +50,9 @@ Workflow for contributing content updates
       desdm-public:dev \
       python3 main.py
     ```
+
+    Once again adding the flag ``--platform linux/x86_64`` on MacOS
+
 6. Open your browser to http://127.0.0.1:8080 to view the website.
 7. Ensure that the ServiceWorker is not registered. Open your web browser's web development tools. In Firefox, use CTRL+SHIFT+I and go to the Application tab. Disable/remove any ServiceWorker you see listed.
 8. Edit and save the relevant HTML files. Reload the page and see the results. Repeat this step until satisfied.
